@@ -1,0 +1,95 @@
+# 堆栈和队列
+
+**Stack**，先入后出，Access和Search **O(n)**,Insertion和Deletion **O(1)**复杂度。
+实现：Array or LinkedList
+**Queue**，先入先出，Access和Search **O(n)**,Insertion和Deletion **O(1)**复杂度。
+实现
+## Leetcode真题
+
+**20-有效的括号**
+
+```
+class Solution {
+    func isValid(_ s: String) -> Bool {
+        var stack:[String] = []
+        var initialParentheses:[String: String] = [")":"(","]":"[","}":"{"]
+
+        for c in s {
+            if !initialParentheses.keys .contains(String(c)) {
+                stack.append(String(c));
+            } else if stack.count > 0 && initialParentheses[String(c)] != stack.removeLast() {
+                return false
+            }
+        }
+
+        if stack.count == 0 {
+            return true;
+        } else {
+            return false
+        }
+    }
+}
+```
+**232-用栈实现队列**
+
+```
+class MyQueue {
+
+    /** Initialize your data structure here. */
+     var inputStack = [Int]()
+     var outputStack = [Int]()
+    init() {
+
+    }
+
+    /** Push element x onto stack. */
+    func push(_ x: Int) {
+        self.inputStack.append(x)
+    }
+
+    /** Removes the element on top of the stack and returns that element. */
+    func pop() -> Int {
+
+
+        if self.outputStack.count > 0 {
+            return self.outputStack.removeLast()
+        } else {
+            while self.inputStack.count > 0 {
+                self.outputStack.append(self.inputStack.removeLast())
+            }
+            return self.outputStack.removeLast()
+        }
+    }
+
+    /** Get the top element. */
+    func peek() -> Int {
+
+        if self.outputStack.count > 0 {
+            return self.outputStack.last ?? 0
+        } else {
+            while self.inputStack.count > 0 {
+                self.outputStack.append(self.inputStack.removeLast())
+            }
+            return self.outputStack.last ?? 0
+        }
+    }
+
+    /** Returns whether the stack is empty. */
+    func empty() -> Bool {
+        if self.outputStack.count > 0 {
+            return false
+        } else if (self.inputStack.count > 0) {
+            return false
+        } else {
+            return true
+        }
+    }
+}
+```
+
+**225-用队列实现栈**
+
+**思路**：
+
+- 两个队列queue1和queue2，其他操作简单,直接操作即可。
+- pop和top操作，先把queue1中除了第一个元素的其他元素放入queue2中，弹出（或查看）第一个元素，再把确queue2中的元素挪会queue1中。
