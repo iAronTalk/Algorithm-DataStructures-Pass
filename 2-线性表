@@ -1,0 +1,150 @@
+# 数组和链表
+
+| 数据结构       | 时间复杂度      |
+| ------------- |:-------------:|
+| 数组（顺序表）      | O(1)的查找，O(n)的插入和删除 |
+| 单链表     | O(n)的查找，O(1)的插入和删除      |
+| 双链表 | 既有前驱节点又有后继节点 ，同上     |
+## Leetcode真题
+
+**206-翻转链表**
+
+```
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public var val: Int
+ *     public var next: ListNode?
+ *     public init(_ val: Int) {
+ *         self.val = val
+ *         self.next = nil
+ *     }
+ * }
+ */
+class Solution {
+    func reverseList(_ head: ListNode?) -> ListNode? {
+
+        guard let safeHead = head else {
+            return nil
+        }
+        var cur: ListNode = safeHead
+        var pre: ListNode? = nil
+
+        while(cur.next != nil) {
+            let curNext = cur.next!
+            cur.next = pre
+            pre = cur
+            cur = curNext
+        }
+
+        cur.next = pre
+        return cur
+    }
+}
+```
+**24-两两交换链表中的节点**
+
+```
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public var val: Int
+ *     public var next: ListNode?
+ *     public init(_ val: Int) {
+ *         self.val = val
+ *         self.next = nil
+ *     }
+ * }
+ */
+class Solution {
+    func swapPairs(_ head: ListNode?) -> ListNode? {
+        guard let safeHead = head, safeHead.next != nil else {
+            return head
+        }
+
+        var secondNode = safeHead.next
+        var thirdNode = secondNode?.next
+
+        secondNode?.next = safeHead
+        safeHead.next = swapPairs(thirdNode)
+
+        return secondNode
+    }
+}
+```
+
+**141-环形链表**
+
+```
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public var val: Int
+ *     public var next: ListNode?
+ *     public init(_ val: Int) {
+ *         self.val = val
+ *         self.next = nil
+ *     }
+ * }
+ */
+ func hasCycle(head: ListNode?) -> Bool {
+    guard let safeHead = head else {
+        return false
+    }
+
+    var slow = safeHead
+    var fast = safeHead
+
+    while slow.next != nil && fast.next?.next != nil {
+        slow = slow.next!
+        fast = (fast.next?.next)!
+
+        if slow === fast {
+            return true
+        }
+    }
+    return false
+}
+```
+
+**142- 环形链表 II**
+```
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public var val: Int
+ *     public var next: ListNode?
+ *     public init(_ val: Int) {
+ *         self.val = val
+ *         self.next = nil
+ *     }
+ * }
+ */
+ func detectCycle(head: ListNode?) -> ListNode? {
+    guard let safeHead = head, safeHead.next != nil else {
+        return nil;
+    }
+
+    var slow = safeHead
+    var fast = safeHead
+    var hasCycle = false
+    while slow.next != nil && fast.next?.next != nil {
+        slow = slow.next!
+        fast = (fast.next?.next)!
+
+        if slow === fast {
+            hasCycle = true
+            break
+        }
+    }
+
+    if hasCycle {
+        var follower = safeHead
+        while follower !== slow {
+            follower = follower.next!
+            slow = slow.next!
+        }
+        return follower
+    }
+```
+### 剑指offer真题
