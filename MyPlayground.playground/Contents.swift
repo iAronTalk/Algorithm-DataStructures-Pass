@@ -6,7 +6,7 @@ class Solution {
     func isValid(_ s: String) -> Bool {
         var stack:[String] = []
         var initialParentheses:[String: String] = [")":"(","]":"[","}":"{"]
-
+        
         for c in s {
             if !initialParentheses.keys .contains(String(c)) {
                 stack.append(String(c));
@@ -14,7 +14,7 @@ class Solution {
                 return false
             }
         }
-
+        
         if stack.count == 0 {
             return true;
         } else {
@@ -33,18 +33,18 @@ class MyQueue {
      var inputStack = [Int]()
      var outputStack = [Int]()
     init() {
-
+    
     }
-
+    
     /** Push element x onto stack. */
     func push(_ x: Int) {
         self.inputStack.append(x)
     }
-
+    
     /** Removes the element on top of the stack and returns that element. */
     func pop() -> Int {
-
-
+        
+        
         if self.outputStack.count > 0 {
             return self.outputStack.removeLast()
         } else {
@@ -54,10 +54,10 @@ class MyQueue {
             return self.outputStack.removeLast()
         }
     }
-
+    
     /** Get the top element. */
     func peek() -> Int {
-
+        
         if self.outputStack.count > 0 {
             return self.outputStack.last ?? 0
         } else {
@@ -67,7 +67,7 @@ class MyQueue {
             return self.outputStack.last ?? 0
         }
     }
-
+    
     /** Returns whether the stack is empty. */
     func empty() -> Bool {
         if self.outputStack.count > 0 {
@@ -98,22 +98,22 @@ class Solution {
         if nums.count <= 0 {
             return []
         }
-
+        
         var window = [Int]()
         var res = [Int]()
-
+        
         var index = 0
         for x in nums {
-
+            
             if let windowFirst = window.first, index >= k && windowFirst <= index - k {
                 window.removeFirst()
             }
-
+            
             while window.count > 0 &&  nums[window.last!] <= x {
                 window.popLast()
             }
             window.append(index)
-
+            
             if index >= k - 1 {
                 res.append(nums[window.first!])
             }
