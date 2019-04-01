@@ -123,95 +123,124 @@ print(myQueue.empty())
 //    }
 //}
 
-class Solution1 {
-    func isAnagram(_ s: String, _ t: String) -> Bool {
-        var sMap = [Character:Int]()
-        var tMap = [Character:Int]()
-        
-        for c in s {
-            if let cNum = sMap[c] {
-                sMap[c] = cNum + 1
-            } else {
-                sMap[c] = 1
-            }
-        }
-        
-        for c in t {
-            if let cNum = tMap[c] {
-                tMap[c] = cNum + 1
-            } else {
-                tMap[c] = 1
-            }
-        }
-        
-        return sMap == tMap
+//class Solution1 {
+//    func isAnagram(_ s: String, _ t: String) -> Bool {
+//        var sMap = [Character:Int]()
+//        var tMap = [Character:Int]()
+//
+//        for c in s {
+//            if let cNum = sMap[c] {
+//                sMap[c] = cNum + 1
+//            } else {
+//                sMap[c] = 1
+//            }
+//        }
+//
+//        for c in t {
+//            if let cNum = tMap[c] {
+//                tMap[c] = cNum + 1
+//            } else {
+//                tMap[c] = 1
+//            }
+//        }
+//
+//        return sMap == tMap
+//    }
+//}
+//
+//class Solution2 {
+//    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+//        var map = [Int:Int]()
+//        var index = 0
+//        for i in nums {
+//            let complement = target - nums[index]
+//            if map.keys.contains(complement) {
+//                return [map[complement]!,index]
+//            }
+//            map[i] = index
+//            index = index + 1
+//        }
+//
+//        return []
+//    }
+//}
+//
+//class Solution {
+//    func threeSum(_ nums: [Int]) -> [[Int]] {
+//        let sortedNums = nums.sorted {$0 < $1}
+//        print("sortedNums = \(sortedNums)")
+//        var res = [[Int]]()
+//        var index = 0
+//        for i in sortedNums {
+//            //这点非常重要，下一个元素与上一个一样，跳过。
+//            if index > 0 && sortedNums[index] == sortedNums[index - 1] {
+//                index = index + 1
+//                continue
+//            }
+//
+//            if index >= sortedNums.count - 2 {
+//                break
+//            }
+//
+//            var left = index + 1
+//            var right = sortedNums.count - 1
+//            while left < right {
+//                let sum = sortedNums[left] + sortedNums[right] + i
+//                if sum < 0 {
+//                    left = left + 1
+//                } else if sum > 0  {
+//                    right = right - 1
+//                } else {
+//                    res.append([i,sortedNums[left],sortedNums[right]])
+//                    while left < right && sortedNums[left] == sortedNums[left + 1] {
+//                        left = left + 1
+//                    }
+//
+//                    while left < right && sortedNums[right] == sortedNums[right - 1] {
+//                        right = right - 1
+//                    }
+//                    left = left + 1
+//                    right = right - 1
+//                }
+//            }
+//
+//            index = index + 1
+//        }
+//
+//        return res
+//    }
+//}
+//
+//var solution = Solution()
+//let res = solution.threeSum([0,-4,-1,-4,-2,-3,2])
+//print(res)
+
+/**
+ * Definition for a binary tree node.
+ */
+ public class TreeNode {
+    public var val: Int
+    public var left: TreeNode?
+    public var right: TreeNode?
+    public init(_ val: Int) {
+        self.val = val
+        self.left = nil
+        self.right = nil
     }
 }
-
-class Solution2 {
-    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        var map = [Int:Int]()
-        var index = 0
-        for i in nums {
-            let complement = target - nums[index]
-            if map.keys.contains(complement) {
-                return [map[complement]!,index]
-            }
-            map[i] = index
-            index = index + 1
-        }
-        
-        return []
-    }
-}
-
 class Solution {
-    func threeSum(_ nums: [Int]) -> [[Int]] {
-        let sortedNums = nums.sorted {$0 < $1}
-        print("sortedNums = \(sortedNums)")
-        var res = [[Int]]()
-        var index = 0
-        for i in sortedNums {
-            //这点非常重要，下一个元素与上一个一样，跳过。
-            if index > 0 && sortedNums[index] == sortedNums[index - 1] {
-                index = index + 1
-                continue
-            }
+    func isValidBST(_ root: TreeNode?) -> Bool {
+        return isValidBST(root, min: Int.min, max: Int.max);
+    }
+    
+    func isValidBST(_ root: TreeNode?, min: Int, max: Int) -> Bool {
+        if let safeRoot = root {
+            if safeRoot.val <= min {return false}
+            if safeRoot.val >= max {return false}
             
-            if index >= sortedNums.count - 2 {
-                break
-            }
-            
-            var left = index + 1
-            var right = sortedNums.count - 1
-            while left < right {
-                let sum = sortedNums[left] + sortedNums[right] + i
-                if sum < 0 {
-                    left = left + 1
-                } else if sum > 0  {
-                    right = right - 1
-                } else {
-                    res.append([i,sortedNums[left],sortedNums[right]])
-                    while left < right && sortedNums[left] == sortedNums[left + 1] {
-                        left = left + 1
-                    }
-                    
-                    while left < right && sortedNums[right] == sortedNums[right - 1] {
-                        right = right - 1
-                    }
-                    left = left + 1
-                    right = right - 1
-                }
-            }
-            
-            index = index + 1
+            return isValidBST(safeRoot.left, min: min, max: safeRoot.val) && isValidBST(safeRoot.right, min: safeRoot.val, max: max)
+        } else {
+            return true
         }
-        
-        return res
     }
 }
-
-var solution = Solution()
-let res = solution.threeSum([0,-4,-1,-4,-2,-3,2])
-print(res)
-
