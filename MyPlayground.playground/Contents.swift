@@ -218,29 +218,72 @@ print(myQueue.empty())
 /**
  * Definition for a binary tree node.
  */
- public class TreeNode {
-    public var val: Int
-    public var left: TreeNode?
-    public var right: TreeNode?
-    public init(_ val: Int) {
-        self.val = val
-        self.left = nil
-        self.right = nil
+// public class TreeNode {
+//    public var val: Int
+//    public var left: TreeNode?
+//    public var right: TreeNode?
+//    public init(_ val: Int) {
+//        self.val = val
+//        self.left = nil
+//        self.right = nil
+//    }
+//}
+//class Solution {
+//    func isValidBST(_ root: TreeNode?) -> Bool {
+//        return isValidBST(root, min: Int.min, max: Int.max);
+//    }
+//
+//    func isValidBST(_ root: TreeNode?, min: Int, max: Int) -> Bool {
+//        if let safeRoot = root {
+//            if safeRoot.val <= min {return false}
+//            if safeRoot.val >= max {return false}
+//
+//            return isValidBST(safeRoot.left, min: min, max: safeRoot.val) && isValidBST(safeRoot.right, min: safeRoot.val, max: max)
+//        } else {
+//            return true
+//        }
+//    }
+//}
+
+class Solution {
+    func myPow(_ x: Double, _ n: Int) -> Double {
+        //terminator
+        if n == 0  {
+            return 1
+        }
+        
+        //prepare data
+        if n < 0 {
+            return myPow(1 / x, -n)
+        }
+        
+        if n % 2 == 1{
+            return x * myPow(x, n-1)
+        }
+        
+        //divide and conquer, generate final result
+        return myPow(x * x, n / 2)
     }
 }
-class Solution {
-    func isValidBST(_ root: TreeNode?) -> Bool {
-        return isValidBST(root, min: Int.min, max: Int.max);
-    }
-    
-    func isValidBST(_ root: TreeNode?, min: Int, max: Int) -> Bool {
-        if let safeRoot = root {
-            if safeRoot.val <= min {return false}
-            if safeRoot.val >= max {return false}
-            
-            return isValidBST(safeRoot.left, min: min, max: safeRoot.val) && isValidBST(safeRoot.right, min: safeRoot.val, max: max)
-        } else {
-            return true
+
+class Solution2 {
+    func myPow(_ x: Double, _ n: Int) -> Double {
+        var pow: Double = 1
+        var locX = x
+        var locN = n
+        if n < 0 {
+            locX = 1 / locX
+            locN = -locN
         }
+        
+        while locN != 0 {
+            if locN & 1 == 1 {
+                pow = locX * pow
+            }
+            locX = locX * locX
+            locN >>= 1
+        }
+        
+        return pow
     }
 }
