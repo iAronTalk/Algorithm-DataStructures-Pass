@@ -245,7 +245,7 @@ print(myQueue.empty())
 //    }
 //}
 
-class Solution {
+class Solution1 {
     func myPow(_ x: Double, _ n: Int) -> Double {
         //terminator
         if n == 0  {
@@ -285,5 +285,56 @@ class Solution2 {
         }
         
         return pow
+    }
+}
+
+class Solution3 {
+    func majorityElement(_ nums: [Int]) -> Int {
+        let sortedNums = nums.sorted()
+        return sortedNums[sortedNums.count/2]
+    }
+}
+
+
+class Solution4 {
+    func majorityElement(_ nums: [Int]) -> Int {
+        return majorityElementInRect(nums, low: 0, high: nums.count - 1)
+    }
+    
+    func majorityElementInRect(_ nums: [Int],low: Int, high: Int) -> Int {
+        if low == high {
+            return nums[low]
+        }
+        
+        let mid = (high - low) / 2 + low
+        let left = majorityElementInRect(nums, low: low, high: mid)
+        let right = majorityElementInRect(nums, low: mid + 1, high: high)
+        
+        if left == right {
+            return left
+        }
+        
+        let countLeft = numsOfNum(nums, num: left, low: low, high: high)
+        let countRight = numsOfNum(nums, num: right, low: low, high: high)
+        
+        if countLeft >= countRight {
+            return left
+        } else {
+            return right
+        }
+    }
+    
+    func numsOfNum(_ nums: [Int], num: Int, low: Int, high: Int) -> Int {
+        var index = 0
+        var count = 0
+        
+        while index <= high {
+            if nums[index] == num {
+                count = count + 1
+            }
+            index = index + 1
+        }
+        
+        return count
     }
 }
