@@ -245,96 +245,238 @@ print(myQueue.empty())
 //    }
 //}
 
-class Solution1 {
-    func myPow(_ x: Double, _ n: Int) -> Double {
-        //terminator
-        if n == 0  {
-            return 1
+//class Solution1 {
+//    func myPow(_ x: Double, _ n: Int) -> Double {
+//        //terminator
+//        if n == 0  {
+//            return 1
+//        }
+//
+//        //prepare data
+//        if n < 0 {
+//            return myPow(1 / x, -n)
+//        }
+//
+//        if n % 2 == 1{
+//            return x * myPow(x, n-1)
+//        }
+//
+//        //divide and conquer, generate final result
+//        return myPow(x * x, n / 2)
+//    }
+//}
+//
+//class Solution2 {
+//    func myPow(_ x: Double, _ n: Int) -> Double {
+//        var pow: Double = 1
+//        var locX = x
+//        var locN = n
+//        if n < 0 {
+//            locX = 1 / locX
+//            locN = -locN
+//        }
+//
+//        while locN != 0 {
+//            if locN & 1 == 1 {
+//                pow = locX * pow
+//            }
+//            locX = locX * locX
+//            locN >>= 1
+//        }
+//
+//        return pow
+//    }
+//}
+//
+//class Solution3 {
+//    func majorityElement(_ nums: [Int]) -> Int {
+//        let sortedNums = nums.sorted()
+//        return sortedNums[sortedNums.count/2]
+//    }
+//}
+//
+//
+//class Solution4 {
+//    func majorityElement(_ nums: [Int]) -> Int {
+//        return majorityElementInRect(nums, low: 0, high: nums.count - 1)
+//    }
+//
+//    func majorityElementInRect(_ nums: [Int],low: Int, high: Int) -> Int {
+//        if low == high {
+//            return nums[low]
+//        }
+//
+//        let mid = (high - low) / 2 + low
+//        let left = majorityElementInRect(nums, low: low, high: mid)
+//        let right = majorityElementInRect(nums, low: mid + 1, high: high)
+//
+//        if left == right {
+//            return left
+//        }
+//
+//        let countLeft = numsOfNum(nums, num: left, low: low, high: high)
+//        let countRight = numsOfNum(nums, num: right, low: low, high: high)
+//
+//        if countLeft >= countRight {
+//            return left
+//        } else {
+//            return right
+//        }
+//    }
+//
+//    func numsOfNum(_ nums: [Int], num: Int, low: Int, high: Int) -> Int {
+//        var index = 0
+//        var count = 0
+//
+//        while index <= high {
+//            if nums[index] == num {
+//                count = count + 1
+//            }
+//            index = index + 1
+//        }
+//
+//        return count
+//    }
+//}
+
+////BFS
+//visited = set()
+//def BFS(graph, start, end):
+//
+//    queue = []
+//    queue.append([start])
+//    visited.add(start)
+//
+//    while queue:
+//        node = queue.pop()
+//        visited.add(node)
+//
+//        process(node)
+//        nodes = generateRelatedNodes(node)
+//        queue.push(nodes)
+//
+//    //other process work
+//
+//
+////DFS
+//visited = set()
+//def DFS(node,visited):
+//    visited.add(node)
+//
+//    //processs node
+//for next_node in node.children():
+//    if not next_node in visited:
+//        DFS(next_node,visited)
+//
+//
+//visited = set()
+//def DFS(self,tree):
+//
+//    if tree.root is Node:
+//        return []
+//
+//    visited, stack = [], [tree.root]
+//
+//    while stack:
+//        node = stack.pop()
+//        visited.add(node)
+//
+//        //process node
+//        process(node)
+//        nodes = generatedRelatedNodes(node)
+//        stack.push(nodes)
+//
+//    //other process work
+
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     public var val: Int
+ *     public var left: TreeNode?
+ *     public var right: TreeNode?
+ *     public init(_ val: Int) {
+ *         self.val = val
+ *         self.left = nil
+ *         self.right = nil
+ *     }
+ * }
+ */
+
+public class TreeNode {
+    public var val: Int
+    public var left: TreeNode?
+    public var right: TreeNode?
+    public init(_ val: Int) {
+        self.val = val
+            self.left = nil
+            self.right = nil
+        }
+}
+class Solution {
+    func levelOrder(_ root: TreeNode?) -> [[Int]] {
+        guard let safeRoot = root else {
+            return []
         }
         
-        //prepare data
-        if n < 0 {
-            return myPow(1 / x, -n)
+        var queue = [TreeNode]()
+        queue.append(safeRoot)
+        //图的话需要存储访问过的节点var visited = []
+        var result = [[Int]]()
+        
+        while queue.count > 0 {
+            var currentLevel = [Int]()
+            
+            for _ in queue {
+                let node = queue.removeFirst()
+                currentLevel.append(node.val)
+                if node.left != nil {
+                    queue.append(node.left!)
+                }
+                if node.right != nil {
+                    queue.append(node.right!)
+                }
+            }
+            
+            result.append(currentLevel)
         }
         
-        if n % 2 == 1{
-            return x * myPow(x, n-1)
-        }
-        
-        //divide and conquer, generate final result
-        return myPow(x * x, n / 2)
+        return result;
     }
 }
 
 class Solution2 {
-    func myPow(_ x: Double, _ n: Int) -> Double {
-        var pow: Double = 1
-        var locX = x
-        var locN = n
-        if n < 0 {
-            locX = 1 / locX
-            locN = -locN
+    var result = [[Int]]()
+    
+    func levelOrder(_ root: TreeNode?) -> [[Int]] {
+        guard let safeNode = root else {
+            return []
         }
         
-        while locN != 0 {
-            if locN & 1 == 1 {
-                pow = locX * pow
-            }
-            locX = locX * locX
-            locN >>= 1
-        }
-        
-        return pow
-    }
-}
-
-class Solution3 {
-    func majorityElement(_ nums: [Int]) -> Int {
-        let sortedNums = nums.sorted()
-        return sortedNums[sortedNums.count/2]
-    }
-}
-
-
-class Solution4 {
-    func majorityElement(_ nums: [Int]) -> Int {
-        return majorityElementInRect(nums, low: 0, high: nums.count - 1)
+        self._dfs(safeNode, level: 0)
+        return result;
     }
     
-    func majorityElementInRect(_ nums: [Int],low: Int, high: Int) -> Int {
-        if low == high {
-            return nums[low]
+    func _dfs(_ root: TreeNode?, level: Int) -> Void {
+        if root == nil {
+            return
         }
         
-        let mid = (high - low) / 2 + low
-        let left = majorityElementInRect(nums, low: low, high: mid)
-        let right = majorityElementInRect(nums, low: mid + 1, high: high)
-        
-        if left == right {
-            return left
+        if result.count < level + 1 {
+            result.append([])
         }
         
-        let countLeft = numsOfNum(nums, num: left, low: low, high: high)
-        let countRight = numsOfNum(nums, num: right, low: low, high: high)
-        
-        if countLeft >= countRight {
-            return left
-        } else {
-            return right
-        }
-    }
-    
-    func numsOfNum(_ nums: [Int], num: Int, low: Int, high: Int) -> Int {
-        var index = 0
-        var count = 0
-        
-        while index <= high {
-            if nums[index] == num {
-                count = count + 1
-            }
-            index = index + 1
-        }
-        
-        return count
+        result[level].append((root?.val)!)
+        self._dfs(root?.left, level: level + 1)
+        self._dfs(root?.right, level: level + 1)
     }
 }
+
+
+
+
+
+
+
+
+
