@@ -134,19 +134,7 @@ class Solution {
 
 *DFS*
 ```
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.left = nil
- *         self.right = nil
- *     }
- * }
- */
+//TreeNode数据结构同上题目
  class Solution {
     var result = [[Int]]()
 
@@ -171,6 +159,117 @@ class Solution {
         result[level].append((root?.val)!)
         self._dfs(root?.left, level: level + 1)
         self._dfs(root?.right, level: level + 1)
+    }
+}
+```
+> TESTING：leetcode
+
+**104-二叉树的最大深度-Easy**
+
+**解题：**
+> 明确题目
+
+给定一个二叉树，找出其最大深度。
+
+二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+
+说明: 叶子节点是指没有子节点的节点。
+
+> 所有可能解法
+
+- BFS
+- DFS
+
+> CODINNG
+
+```
+//TreeNode数据结构同上题目
+class Solution {
+    func maxDepth(_ root: TreeNode?) -> Int {
+        if root == nil {
+            return 0
+        }
+        return 1 + max(maxDepth(root!.left),maxDepth(root!.right))
+    }
+}
+```
+> TESTING：leetcode
+
+**111-二叉树的最小深度-Easy**
+
+**解题：**
+> 明确题目
+
+给定一个二叉树，找出其最小深度。
+
+最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
+
+说明: 叶子节点是指没有子节点的节点。
+
+> 所有可能解法
+
+- BFS
+- DFS
+
+> CODINNG
+
+```
+//TreeNode数据结构同上题目
+class Solution {
+    func minDepth(_ root: TreeNode?) -> Int {
+        if root == nil {
+            return 0
+        }
+
+        let left = minDepth(root!.left)
+        let right = minDepth(root!.right)
+
+        if left == 0 || right == 0 {
+            return left + right + 1
+        } else {
+            return 1 + min(left,right)
+        }
+    }
+}
+```
+> TESTING：leetcode
+
+**22-括号生成-Medium**
+
+**解题：**
+> 明确题目
+
+给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。
+
+> 所有可能解法
+
+- 递归 + 剪枝
+
+> CODINNG
+
+```
+】class Solution {
+    var result = [String]()
+
+    func generateParenthesis(_ n: Int) -> [String] {
+
+        _gen("", left: n, right: n)
+        return result
+    }
+
+    func _gen(_ sub: String, left: Int, right: Int) -> Void {
+        if left == 0 && right == 0 {
+            result.append(sub)
+            return
+        }
+
+        if left > 0 {
+            _gen(sub + "(", left: left - 1, right: right)
+        }
+
+        if right > left {
+            _gen(sub + ")", left: left, right: right - 1)
+        }
     }
 }
 ```

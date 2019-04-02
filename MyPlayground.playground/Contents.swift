@@ -403,80 +403,136 @@ print(myQueue.empty())
  * }
  */
 
+//public class TreeNode {
+//    public var val: Int
+//    public var left: TreeNode?
+//    public var right: TreeNode?
+//    public init(_ val: Int) {
+//        self.val = val
+//            self.left = nil
+//            self.right = nil
+//        }
+//}
+//class Solution {
+//    func levelOrder(_ root: TreeNode?) -> [[Int]] {
+//        guard let safeRoot = root else {
+//            return []
+//        }
+//
+//        var queue = [TreeNode]()
+//        queue.append(safeRoot)
+//        //图的话需要存储访问过的节点var visited = []
+//        var result = [[Int]]()
+//
+//        while queue.count > 0 {
+//            var currentLevel = [Int]()
+//
+//            for _ in queue {
+//                let node = queue.removeFirst()
+//                currentLevel.append(node.val)
+//                if node.left != nil {
+//                    queue.append(node.left!)
+//                }
+//                if node.right != nil {
+//                    queue.append(node.right!)
+//                }
+//            }
+//
+//            result.append(currentLevel)
+//        }
+//
+//        return result;
+//    }
+//}
+//
+//class Solution2 {
+//    var result = [[Int]]()
+//
+//    func levelOrder(_ root: TreeNode?) -> [[Int]] {
+//        guard let safeNode = root else {
+//            return []
+//        }
+//
+//        self._dfs(safeNode, level: 0)
+//        return result;
+//    }
+//
+//    func _dfs(_ root: TreeNode?, level: Int) -> Void {
+//        if root == nil {
+//            return
+//        }
+//
+//        if result.count < level + 1 {
+//            result.append([])
+//        }
+//
+//        result[level].append((root?.val)!)
+//        self._dfs(root?.left, level: level + 1)
+//        self._dfs(root?.right, level: level + 1)
+//    }
+//}
+
+
 public class TreeNode {
     public var val: Int
     public var left: TreeNode?
     public var right: TreeNode?
     public init(_ val: Int) {
         self.val = val
-            self.left = nil
-            self.right = nil
-        }
-}
-class Solution {
-    func levelOrder(_ root: TreeNode?) -> [[Int]] {
-        guard let safeRoot = root else {
-            return []
-        }
-        
-        var queue = [TreeNode]()
-        queue.append(safeRoot)
-        //图的话需要存储访问过的节点var visited = []
-        var result = [[Int]]()
-        
-        while queue.count > 0 {
-            var currentLevel = [Int]()
-            
-            for _ in queue {
-                let node = queue.removeFirst()
-                currentLevel.append(node.val)
-                if node.left != nil {
-                    queue.append(node.left!)
-                }
-                if node.right != nil {
-                    queue.append(node.right!)
-                }
-            }
-            
-            result.append(currentLevel)
-        }
-        
-        return result;
+        self.left = nil
+        self.right = nil
     }
 }
 
+class Solution {
+    func maxDepth(_ root: TreeNode?) -> Int {
+        if root == nil {
+            return 0
+        }
+        return 1 + max(maxDepth(root!.left),maxDepth(root!.right))
+    }
+}
+
+
 class Solution2 {
-    var result = [[Int]]()
-    
-    func levelOrder(_ root: TreeNode?) -> [[Int]] {
-        guard let safeNode = root else {
-            return []
+    func minDepth(_ root: TreeNode?) -> Int {
+        if root == nil {
+            return 0
         }
         
-        self._dfs(safeNode, level: 0)
-        return result;
+        let left = minDepth(root!.left)
+        let right = minDepth(root!.right)
+        
+        if left == 0 || right == 0 {
+            return left + right + 1
+        } else {
+            return 1 + min(left,right)
+        }
+    }
+}
+
+class Solution3 {
+    var result = [String]()
+    
+    func generateParenthesis(_ n: Int) -> [String] {
+        
+        _gen("", left: n, right: n)
+        return result
     }
     
-    func _dfs(_ root: TreeNode?, level: Int) -> Void {
-        if root == nil {
+    func _gen(_ sub: String, left: Int, right: Int) -> Void {
+        if left == 0 && right == 0 {
+            result.append(sub)
             return
         }
         
-        if result.count < level + 1 {
-            result.append([])
+        if left > 0 {
+            _gen(sub + "(", left: left - 1, right: right)
         }
         
-        result[level].append((root?.val)!)
-        self._dfs(root?.left, level: level + 1)
-        self._dfs(root?.right, level: level + 1)
+        if right > left {
+            _gen(sub + ")", left: left, right: right - 1)
+        }
     }
 }
-
-
-
-
-
-
-
-
 
