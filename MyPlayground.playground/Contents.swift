@@ -473,66 +473,191 @@ print(myQueue.empty())
 //}
 
 
-public class TreeNode {
-    public var val: Int
-    public var left: TreeNode?
-    public var right: TreeNode?
-    public init(_ val: Int) {
-        self.val = val
-        self.left = nil
-        self.right = nil
-    }
-}
+//public class TreeNode {
+//    public var val: Int
+//    public var left: TreeNode?
+//    public var right: TreeNode?
+//    public init(_ val: Int) {
+//        self.val = val
+//        self.left = nil
+//        self.right = nil
+//    }
+//}
+//
+//class Solution {
+//    func maxDepth(_ root: TreeNode?) -> Int {
+//        if root == nil {
+//            return 0
+//        }
+//        return 1 + max(maxDepth(root!.left),maxDepth(root!.right))
+//    }
+//}
+//
+//
+//class Solution2 {
+//    func minDepth(_ root: TreeNode?) -> Int {
+//        if root == nil {
+//            return 0
+//        }
+//
+//        let left = minDepth(root!.left)
+//        let right = minDepth(root!.right)
+//
+//        if left == 0 || right == 0 {
+//            return left + right + 1
+//        } else {
+//            return 1 + min(left,right)
+//        }
+//    }
+//}
+//
+//class Solution3 {
+//    var result = [String]()
+//
+//    func generateParenthesis(_ n: Int) -> [String] {
+//
+//        _gen("", left: n, right: n)
+//        return result
+//    }
+//
+//    func _gen(_ sub: String, left: Int, right: Int) -> Void {
+//        if left == 0 && right == 0 {
+//            result.append(sub)
+//            return
+//        }
+//
+//        if left > 0 {
+//            _gen(sub + "(", left: left - 1, right: right)
+//        }
+//
+//        if right > left {
+//            _gen(sub + ")", left: left, right: right - 1)
+//        }
+//    }
+//}
 
 class Solution {
-    func maxDepth(_ root: TreeNode?) -> Int {
-        if root == nil {
-            return 0
+    func mySqrt(_ x: Int) -> Int {
+        if x == 0 || x == 1 {
+            return x
         }
-        return 1 + max(maxDepth(root!.left),maxDepth(root!.right))
+        
+        var left = 0
+        var right = x
+        var res = 0
+        while left <= right {
+            let mid = (left + right) / 2
+            if mid == x / mid {
+                return mid
+            } else if mid < x / mid {
+                left = mid + 1
+                res = mid
+            } else {
+                right = mid - 1
+            }
+        }
+        
+        return res
     }
 }
 
-
-class Solution2 {
-    func minDepth(_ root: TreeNode?) -> Int {
-        if root == nil {
-            return 0
-        }
-        
-        let left = minDepth(root!.left)
-        let right = minDepth(root!.right)
-        
-        if left == 0 || right == 0 {
-            return left + right + 1
+public class TrieNode {
+    var isEnd:Bool
+    var children:[Character:TrieNode]
+    public init () {
+        isEnd = false
+        children = [Character:TrieNode]()
+    }
+    
+    func containKey(_ key: Character) -> Bool {
+        if children[key] == nil {
+            return false
         } else {
-            return 1 + min(left,right)
+            return true
         }
+    }
+    func getTrieNode(_ key: Character) -> TrieNode? {
+        return children[key];
+    }
+    
+    func setTrieNode(_ key: Character, trieNode: TrieNode) -> Void {
+        children[key] = trieNode
+    }
+    
+    func end() -> Bool {
+        return isEnd
+    }
+    
+    func setEnd() -> Void {
+        isEnd = true
     }
 }
 
-class Solution3 {
-    var result = [String]()
+class Trie {
     
-    func generateParenthesis(_ n: Int) -> [String] {
-        
-        _gen("", left: n, right: n)
-        return result
+    var root: TrieNode = TrieNode()
+    
+    /** Initialize your data structure here. */
+    init() {
     }
     
-    func _gen(_ sub: String, left: Int, right: Int) -> Void {
-        if left == 0 && right == 0 {
-            result.append(sub)
-            return
+    /** Inserts a word into the trie. */
+    func insert(_ word: String) {
+        var node = root
+        for c in word {
+            if !node.containKey(c) {
+                node.setTrieNode(c, trieNode: TrieNode())
+            }
+            node = node.getTrieNode(c)!
         }
         
-        if left > 0 {
-            _gen(sub + "(", left: left - 1, right: right)
-        }
+        node.setEnd()
+    }
+    
+    /** Returns if the word is in the trie. */
+    func search(_ word: String) -> Bool {
         
-        if right > left {
-            _gen(sub + ")", left: left, right: right - 1)
+        let node = searchPrefix(word)
+        if let safeNode = node, safeNode.end() {
+            return true
+        } else {
+            return false
         }
     }
+    
+    func searchPrefix(_ word: String) -> TrieNode? {
+        var node: TrieNode = root
+        for c in word {
+            if node.containKey(c) {
+                node = node.getTrieNode(c)!
+            } else {
+                return nil
+            }
+        }
+        
+        return node
+    }
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    func startsWith(_ prefix: String) -> Bool {
+        let node = searchPrefix(prefix)
+        if node != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    
 }
 
+var trie = Trie()
+trie.insert("apple")
+let contain = trie.search("apple")
+print(contain)
+/**
+ * Your Trie object will be instantiated and called as such:
+ * let obj = Trie()
+ * obj.insert(word)
+ * let ret_2: Bool = obj.search(word)
+ * let ret_3: Bool = obj.startsWith(prefix)
+ */
