@@ -536,124 +536,124 @@ print(myQueue.empty())
 //    }
 //}
 
-class Solution {
-    func mySqrt(_ x: Int) -> Int {
-        if x == 0 || x == 1 {
-            return x
-        }
-        
-        var left = 0
-        var right = x
-        var res = 0
-        while left <= right {
-            let mid = (left + right) / 2
-            if mid == x / mid {
-                return mid
-            } else if mid < x / mid {
-                left = mid + 1
-                res = mid
-            } else {
-                right = mid - 1
-            }
-        }
-        
-        return res
-    }
-}
-
-public class TrieNode {
-    var isEnd:Bool
-    var children:[Character:TrieNode]
-    public init () {
-        isEnd = false
-        children = [Character:TrieNode]()
-    }
-    
-    func containKey(_ key: Character) -> Bool {
-        if children[key] == nil {
-            return false
-        } else {
-            return true
-        }
-    }
-    func getTrieNode(_ key: Character) -> TrieNode? {
-        return children[key];
-    }
-    
-    func setTrieNode(_ key: Character, trieNode: TrieNode) -> Void {
-        children[key] = trieNode
-    }
-    
-    func end() -> Bool {
-        return isEnd
-    }
-    
-    func setEnd() -> Void {
-        isEnd = true
-    }
-}
-
-class Trie {
-    
-    var root: TrieNode = TrieNode()
-    
-    /** Initialize your data structure here. */
-    init() {
-    }
-    
-    /** Inserts a word into the trie. */
-    func insert(_ word: String) {
-        var node = root
-        for c in word {
-            if !node.containKey(c) {
-                node.setTrieNode(c, trieNode: TrieNode())
-            }
-            node = node.getTrieNode(c)!
-        }
-        
-        node.setEnd()
-    }
-    
-    /** Returns if the word is in the trie. */
-    func search(_ word: String) -> Bool {
-        
-        let node = searchPrefix(word)
-        if let safeNode = node, safeNode.end() {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func searchPrefix(_ word: String) -> TrieNode? {
-        var node: TrieNode = root
-        for c in word {
-            if node.containKey(c) {
-                node = node.getTrieNode(c)!
-            } else {
-                return nil
-            }
-        }
-        
-        return node
-    }
-    /** Returns if there is any word in the trie that starts with the given prefix. */
-    func startsWith(_ prefix: String) -> Bool {
-        let node = searchPrefix(prefix)
-        if node != nil {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    
-}
-
-var trie = Trie()
-trie.insert("apple")
-let contain = trie.search("apple")
-print(contain)
+//class Solution {
+//    func mySqrt(_ x: Int) -> Int {
+//        if x == 0 || x == 1 {
+//            return x
+//        }
+//
+//        var left = 0
+//        var right = x
+//        var res = 0
+//        while left <= right {
+//            let mid = (left + right) / 2
+//            if mid == x / mid {
+//                return mid
+//            } else if mid < x / mid {
+//                left = mid + 1
+//                res = mid
+//            } else {
+//                right = mid - 1
+//            }
+//        }
+//
+//        return res
+//    }
+//}
+//
+//public class TrieNode {
+//    var isEnd:Bool
+//    var children:[Character:TrieNode]
+//    public init () {
+//        isEnd = false
+//        children = [Character:TrieNode]()
+//    }
+//
+//    func containKey(_ key: Character) -> Bool {
+//        if children[key] == nil {
+//            return false
+//        } else {
+//            return true
+//        }
+//    }
+//    func getTrieNode(_ key: Character) -> TrieNode? {
+//        return children[key];
+//    }
+//
+//    func setTrieNode(_ key: Character, trieNode: TrieNode) -> Void {
+//        children[key] = trieNode
+//    }
+//
+//    func end() -> Bool {
+//        return isEnd
+//    }
+//
+//    func setEnd() -> Void {
+//        isEnd = true
+//    }
+//}
+//
+//class Trie {
+//
+//    var root: TrieNode = TrieNode()
+//
+//    /** Initialize your data structure here. */
+//    init() {
+//    }
+//
+//    /** Inserts a word into the trie. */
+//    func insert(_ word: String) {
+//        var node = root
+//        for c in word {
+//            if !node.containKey(c) {
+//                node.setTrieNode(c, trieNode: TrieNode())
+//            }
+//            node = node.getTrieNode(c)!
+//        }
+//
+//        node.setEnd()
+//    }
+//
+//    /** Returns if the word is in the trie. */
+//    func search(_ word: String) -> Bool {
+//
+//        let node = searchPrefix(word)
+//        if let safeNode = node, safeNode.end() {
+//            return true
+//        } else {
+//            return false
+//        }
+//    }
+//
+//    func searchPrefix(_ word: String) -> TrieNode? {
+//        var node: TrieNode = root
+//        for c in word {
+//            if node.containKey(c) {
+//                node = node.getTrieNode(c)!
+//            } else {
+//                return nil
+//            }
+//        }
+//
+//        return node
+//    }
+//    /** Returns if there is any word in the trie that starts with the given prefix. */
+//    func startsWith(_ prefix: String) -> Bool {
+//        let node = searchPrefix(prefix)
+//        if node != nil {
+//            return true
+//        } else {
+//            return false
+//        }
+//    }
+//
+//
+//}
+//
+//var trie = Trie()
+//trie.insert("apple")
+//let contain = trie.search("apple")
+//print(contain)
 /**
  * Your Trie object will be instantiated and called as such:
  * let obj = Trie()
@@ -661,3 +661,38 @@ print(contain)
  * let ret_2: Bool = obj.search(word)
  * let ret_3: Bool = obj.startsWith(prefix)
  */
+
+class Solution {
+    func countBits(_ num: Int) -> [Int] {
+        if num == 0 {
+            return [0]
+        }
+        
+        var result = [Int]()
+        
+        result.append(0)
+        result.append(1)
+        
+        var index = 0
+        while index <= num {
+            
+            if index >= 2 {
+                print(index)
+                result.append(result[index & (index - 1)] + 1) 
+            }
+            index = index + 1
+        }
+        
+        return result
+    }
+}
+
+let solution = Solution()
+var countBits = solution.countBits(2)
+print(countBits)
+
+countBits = solution.countBits(0)
+print(countBits)
+
+countBits = solution.countBits(4)
+print(countBits)
