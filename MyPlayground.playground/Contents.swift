@@ -662,37 +662,115 @@ print(myQueue.empty())
  * let ret_3: Bool = obj.startsWith(prefix)
  */
 
-class Solution {
-    func countBits(_ num: Int) -> [Int] {
-        if num == 0 {
-            return [0]
+//class Solution {
+//    func countBits(_ num: Int) -> [Int] {
+//        if num == 0 {
+//            return [0]
+//        }
+//
+//        var result = [Int]()
+//
+//        result.append(0)
+//        result.append(1)
+//
+//        var index = 0
+//        while index <= num {
+//
+//            if index >= 2 {
+//                print(index)
+//                result.append(result[index & (index - 1)] + 1)
+//            }
+//            index = index + 1
+//        }
+//
+//        return result
+//    }
+//}
+//
+//let solution = Solution()
+//var countBits = solution.countBits(2)
+//print(countBits)
+//
+//countBits = solution.countBits(0)
+//print(countBits)
+//
+//countBits = solution.countBits(4)
+//print(countBits)
+
+class Solution2 {
+    func climbStairs(_ n: Int) -> Int {
+        if n == 0 || n == 1 || n == 2 {
+            return n
         }
         
-        var result = [Int]()
-        
-        result.append(0)
-        result.append(1)
-        
-        var index = 0
-        while index <= num {
-            
-            if index >= 2 {
-                print(index)
-                result.append(result[index & (index - 1)] + 1) 
-            }
-            index = index + 1
+        var stairs = [Int]()
+        stairs.append(1)
+        stairs.append(2)
+        for i in 2...n-1 {
+            stairs.append(stairs[i-1] + stairs[i-2])
         }
-        
-        return result
+        return stairs[n-1]
     }
 }
 
-let solution = Solution()
-var countBits = solution.countBits(2)
-print(countBits)
+var solution = Solution2()
+let counts = solution.climbStairs(5)
+print(counts)
 
-countBits = solution.countBits(0)
-print(countBits)
 
-countBits = solution.countBits(4)
-print(countBits)
+class Solution3 {
+    func minimumTotal(_ triangle: [[Int]]) -> Int {
+        if triangle.count == 1 {
+            return (triangle.first?.first)!
+        }
+        
+        var result = Array<Int>.init(repeating: 0, count: triangle.count + 1)
+        for i in (0...(triangle.count - 1)).reversed() {
+            for j in 0...triangle[i].count - 1{
+                result[j] = triangle[i][j] + min(result[j], result[j+1])
+            }
+        }
+        
+        return result[0]
+    }
+}
+
+var minimumTotalSolution = Solution3()
+let finalMinimum = minimumTotalSolution.minimumTotal([[2],
+                                                      [3,4],
+                                                      [6,5,7],
+                                                      [4,1,8,3]])
+print(finalMinimum)
+
+
+class Solution {
+    func lengthOfLIS(_ nums: [Int]) -> Int {
+        if nums.count < 2 {
+            return nums.count
+        }
+        
+        var dp = Array<Int>.init(repeating: 1, count: nums.count)
+        var res = 0
+        for i in 1...(nums.count - 1) {
+            var maxInJ = 0
+            for j in 0...(i - 1) {
+                if nums[i] > nums[j] {
+                    maxInJ = max(maxInJ, dp[j])
+                }
+            }
+            
+            dp[i] = maxInJ + 1
+            res = max(res, dp[i])
+        }
+        
+        return res
+    }
+}
+
+var solution3 = Solution()
+var length = solution3.lengthOfLIS([10,9,2,5,3,7,101,18])
+print(length)
+
+length = solution3.lengthOfLIS([10])
+print(length)
+
