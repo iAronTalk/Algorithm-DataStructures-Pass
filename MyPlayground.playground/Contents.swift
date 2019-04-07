@@ -697,80 +697,102 @@ print(myQueue.empty())
 //countBits = solution.countBits(4)
 //print(countBits)
 
-class Solution2 {
-    func climbStairs(_ n: Int) -> Int {
-        if n == 0 || n == 1 || n == 2 {
-            return n
-        }
-        
-        var stairs = [Int]()
-        stairs.append(1)
-        stairs.append(2)
-        for i in 2...n-1 {
-            stairs.append(stairs[i-1] + stairs[i-2])
-        }
-        return stairs[n-1]
-    }
-}
-
-var solution = Solution2()
-let counts = solution.climbStairs(5)
-print(counts)
-
-
-class Solution3 {
-    func minimumTotal(_ triangle: [[Int]]) -> Int {
-        if triangle.count == 1 {
-            return (triangle.first?.first)!
-        }
-        
-        var result = Array<Int>.init(repeating: 0, count: triangle.count + 1)
-        for i in (0...(triangle.count - 1)).reversed() {
-            for j in 0...triangle[i].count - 1{
-                result[j] = triangle[i][j] + min(result[j], result[j+1])
-            }
-        }
-        
-        return result[0]
-    }
-}
-
-var minimumTotalSolution = Solution3()
-let finalMinimum = minimumTotalSolution.minimumTotal([[2],
-                                                      [3,4],
-                                                      [6,5,7],
-                                                      [4,1,8,3]])
-print(finalMinimum)
-
+//class Solution2 {
+//    func climbStairs(_ n: Int) -> Int {
+//        if n == 0 || n == 1 || n == 2 {
+//            return n
+//        }
+//
+//        var stairs = [Int]()
+//        stairs.append(1)
+//        stairs.append(2)
+//        for i in 2...n-1 {
+//            stairs.append(stairs[i-1] + stairs[i-2])
+//        }
+//        return stairs[n-1]
+//    }
+//}
+//
+//var solution = Solution2()
+//let counts = solution.climbStairs(5)
+//print(counts)
+//
+//
+//class Solution3 {
+//    func minimumTotal(_ triangle: [[Int]]) -> Int {
+//        if triangle.count == 1 {
+//            return (triangle.first?.first)!
+//        }
+//
+//        var result = Array<Int>.init(repeating: 0, count: triangle.count + 1)
+//        for i in (0...(triangle.count - 1)).reversed() {
+//            for j in 0...triangle[i].count - 1{
+//                result[j] = triangle[i][j] + min(result[j], result[j+1])
+//            }
+//        }
+//
+//        return result[0]
+//    }
+//}
+//
+//var minimumTotalSolution = Solution3()
+//let finalMinimum = minimumTotalSolution.minimumTotal([[2],
+//                                                      [3,4],
+//                                                      [6,5,7],
+//                                                      [4,1,8,3]])
+//print(finalMinimum)
+//
+//
+//class Solution {
+//    func lengthOfLIS(_ nums: [Int]) -> Int {
+//        if nums.count < 2 {
+//            return nums.count
+//        }
+//
+//        var dp = Array<Int>.init(repeating: 1, count: nums.count)
+//        var res = 0
+//        for i in 1...(nums.count - 1) {
+//            var maxInJ = 0
+//            for j in 0...(i - 1) {
+//                if nums[i] > nums[j] {
+//                    maxInJ = max(maxInJ, dp[j])
+//                }
+//            }
+//
+//            dp[i] = maxInJ + 1
+//            res = max(res, dp[i])
+//        }
+//
+//        return res
+//    }
+//}
+//
+//var solution3 = Solution()
+//var length = solution3.lengthOfLIS([10,9,2,5,3,7,101,18])
+//print(length)
+//
+//length = solution3.lengthOfLIS([10])
+//print(length)
 
 class Solution {
-    func lengthOfLIS(_ nums: [Int]) -> Int {
-        if nums.count < 2 {
-            return nums.count
-        }
+    func coinChange(_ coins: [Int], _ amount: Int) -> Int {
         
-        var dp = Array<Int>.init(repeating: 1, count: nums.count)
-        var res = 0
-        for i in 1...(nums.count - 1) {
-            var maxInJ = 0
-            for j in 0...(i - 1) {
-                if nums[i] > nums[j] {
-                    maxInJ = max(maxInJ, dp[j])
+        var dp = Array<Int>.init(repeating: amount + 1, count: amount + 1)
+        dp[0] = 0
+        
+        for i in 0...amount {
+            for j in 0...coins.count - 1 {
+                if coins[j] <= i {
+                    dp[i] = min(dp[i], dp[i - coins[j]] + 1)
                 }
             }
-            
-            dp[i] = maxInJ + 1
-            res = max(res, dp[i])
         }
         
-        return res
+        if dp[amount] > amount {
+            return -1
+        } else {
+            return dp[amount]
+        }
     }
 }
-
-var solution3 = Solution()
-var length = solution3.lengthOfLIS([10,9,2,5,3,7,101,18])
-print(length)
-
-length = solution3.lengthOfLIS([10])
-print(length)
 
