@@ -774,25 +774,6 @@ print(myQueue.empty())
 //length = solution3.lengthOfLIS([10])
 //print(length)
 
-class Solution {
-    func coinChange(_ coins: [Int], _ amount: Int) -> Int {
-        
-        var dp = Array<Int>.init(repeating: amount + 1, count: amount + 1)
-        dp[0] = 0
-        
-        for i in 0...amount {
-            for j in 0...coins.count - 1 {
-                if coins[j] <= i {
-                    dp[i] = min(dp[i], dp[i - coins[j]] + 1)
-                }
-            }
-        }
-        
-        if dp[amount] > amount {
-            return -1
-        } else {
-            return dp[amount]
-        }
-    }
-}
+
+
 
