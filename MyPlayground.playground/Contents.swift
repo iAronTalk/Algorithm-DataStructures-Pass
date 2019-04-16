@@ -775,5 +775,8 @@ print(myQueue.empty())
 //print(length)
 
 
-
-
+class Solution {
+    func rob(_ nums: [Int]) -> Int {
+        if nums.count == 0 {}
+    }
+}
