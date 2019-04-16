@@ -66,7 +66,7 @@ def DFS(self,tree):
 
 两种搜索算法对比如下图。
 
-![](/Resources/9-BFS&DFS-1.png)
+![](/GeekTimeAlgorithmPass/Resources/9-BFS&DFS-1.png)
 ## Leetcode真题
 
 **102-二叉树的层次遍历-Medium**
