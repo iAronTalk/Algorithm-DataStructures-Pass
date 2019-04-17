@@ -14,9 +14,8 @@
 ```
 **注意事项**
 处理重复的操作，k为链表长度的整数倍时，取余进行操作。
-**CODINNG**
 
-*递归解法*
+**CODINNG**
 ```
 class Solution {
     func rotateRight(_ head: ListNode?, _ k: Int) -> ListNode? {

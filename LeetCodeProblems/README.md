@@ -20,8 +20,23 @@
 
 [![Travis](https://img.shields.io/badge/language-Swift-red.svg)](https://developer.apple.com/)
 
-## Array
+## Array / 数组
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
 | 34 | [Find First And Last Position Of Element in Sorted Array / 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [Swift](/LeetCodeProblems/Array/34-Find-First-And-Last-Position-Of-Element-in-Sorted-Array.md) | Medium |
 | 88 | [Merge Sorted Array / 合并两个有序数组](https://leetcode.com/problems/merge-sorted-array/)| [Swift](/LeetCodeProblems/Array/88-Merge-Sorted-Array.md) | Easy |
+
+## LinkedList / 链表
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 2 | [Add Two Numbers / 两数相加](https://leetcode.com/problems/add-two-numbers/)| [Swift](/LeetCodeProblems/LinkedList/2-Add-Two-Numbers.md) | Medium |
+| 19 | [Remove Nth Node From End of List / 删除链表的倒数第N个节点](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| [Swift](/LeetCodeProblems/Array/19-Remove-Nth-Node-From-End-of-List.md) | Medium |
+| 61 | [Rotate List / 旋转链表](https://leetcode.com/problems/rotate-list/)| [Swift](/LeetCodeProblems/Array/61-Rotate-List.md) | Medium |
+
+## Tree / 树
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 94 | [Binary Tree Inorder Traversal / 二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/94-Binary-Tree-Inorder-Traversal.md) | Medium |
+| 100 | [Same Tree / 相同的树](https://leetcode.com/problems/same-tree/)| [Swift](/LeetCodeProblems/Tree/100-Same-Tree.md) | Easy |
+| 105 | [Construct Binary Tree from Preorder and Inorder Traversal / 从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal.md) | Medium |
+| 106 | [Construct Binary Tree from Inorder and Postorder Traversal / 从中序与后序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal.md) | Medium |

@@ -1,4 +1,5 @@
-# 105. Construct Binary Tree from Preorder and Inorder Traversal - Middle
+# 105. Construct Binary Tree from Preorder and Inorder Traversal - Medium
+
 **从前序与中序遍历序列构造二叉树**
 
 根据一棵树的前序遍历与中序遍历构造二叉树。
