@@ -23,4 +23,5 @@
 ## Array
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
-| 34 | [Find First And Last Position Of Element in Sorted Array/ 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [Swift](/Array/34-Find-First-And-Last-Position-Of-Element-in-Sorted-Array.md) | Medium |
+| 34 | [Find First And Last Position Of Element in Sorted Array / 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [Swift](/LeetCodeProblems/Array/34-Find-First-And-Last-Position-Of-Element-in-Sorted-Array.md) | Medium |
+| 88 | [Merge Sorted Array / 合并两个有序数组](https://leetcode.com/problems/merge-sorted-array/)| [Swift](/LeetCodeProblems/Array/88-Merge-Sorted-Array.md) | Easy |
