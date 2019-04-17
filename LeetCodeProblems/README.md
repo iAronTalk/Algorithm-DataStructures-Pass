@@ -30,8 +30,8 @@
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
 | 2 | [Add Two Numbers / 两数相加](https://leetcode.com/problems/add-two-numbers/)| [Swift](/LeetCodeProblems/LinkedList/2-Add-Two-Numbers.md) | Medium |
-| 19 | [Remove Nth Node From End of List / 删除链表的倒数第N个节点](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| [Swift](/LeetCodeProblems/Array/19-Remove-Nth-Node-From-End-of-List.md) | Medium |
-| 61 | [Rotate List / 旋转链表](https://leetcode.com/problems/rotate-list/)| [Swift](/LeetCodeProblems/Array/61-Rotate-List.md) | Medium |
+| 19 | [Remove Nth Node From End of List / 删除链表的倒数第N个节点](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| [Swift](/LeetCodeProblems/LinkedList/19-Remove-Nth-Node-From-End-of-List.md) | Medium |
+| 61 | [Rotate List / 旋转链表](https://leetcode.com/problems/rotate-list/)| [Swift](/LeetCodeProblems/LinkedList/61-Rotate-List.md) | Medium |
 
 ## Tree / 树
 | # | Title | Solution | Difficulty |
