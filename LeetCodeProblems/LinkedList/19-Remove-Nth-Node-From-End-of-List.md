@@ -17,7 +17,6 @@
 
 **CODINNG**
 
-*递归解法*
 ```
 class Solution {
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
