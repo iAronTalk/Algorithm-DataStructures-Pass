@@ -38,7 +38,7 @@
 | 82 | [Remove Duplicates from Sorted List II / 删除排序链表中的重复元素 II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)| [Swift](/LeetCodeProblems/LinkedList/82-Remove-Duplicates-from-Sorted-List-II.md) | Medium |
 | 83 | [Remove Duplicates from Sorted List / 删除排序链表中的重复元素](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)| [Swift](/LeetCodeProblems/LinkedList/83-Remove-Duplicates-from-Sorted-List.md) | Easy |
 | 203 | [Remove Linked List Elements / 移除链表元素](https://leetcode.com/problems/remove-linked-list-elements/)| [Swift](/LeetCodeProblems/LinkedList/203-Remove-Linked-List-Elements.md) | Easy |
-| 237 | [Delete Node in a Linked List / 删除链表中的节点](https://leetcode.com/problems/delete-node-in-a-linked-list/)| [Swift](/LeetCodeProblems/LinkedList/237-Delete-Node-in-a -Linked-List.md) | Easy |
+| 237 | [Delete Node in a Linked List / 删除链表中的节点](https://leetcode.com/problems/delete-node-in-a-linked-list/)| [Swift](/LeetCodeProblems/LinkedList/237-Delete-Node-in-a-Linked-List.md) | Easy |
 
 ## Tree / 树
 | # | Title | Solution | Difficulty |
