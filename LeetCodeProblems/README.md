@@ -47,5 +47,6 @@
 | - | ----- | -------- | ---------- |
 | 94 | [Binary Tree Inorder Traversal / 二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/94-Binary-Tree-Inorder-Traversal.md) | Medium |
 | 100 | [Same Tree / 相同的树](https://leetcode.com/problems/same-tree/)| [Swift](/LeetCodeProblems/Tree/100-Same-Tree.md) | Easy |
+| 101 | [Symmetric Tree / 对称二叉树](https://leetcode.com/problems/symmetric-tree/)| [Swift](/LeetCodeProblems/Tree/101-Symmetric-Tree.md) | Easy |
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal / 从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal.md) | Medium |
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal / 从中序与后序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal.md) | Medium |
