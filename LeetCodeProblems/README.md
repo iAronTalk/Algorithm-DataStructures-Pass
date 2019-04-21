@@ -33,10 +33,12 @@
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
 | 7 | [Reverse Integer / 整数反转](https://leetcode.com/problems/reverse-integer/)| [Swift](/LeetCodeProblems/String/7-Reverse-Integer.md) | Easy |
-| 344 | [Reverse String / 反转字符串](https://leetcode.com/problems/reverse-string/)| [Swift](/LeetCodeProblems/String/344-Reverse-String.md) | Easy |
-| 387 | [First Unique Character in a String / 字符串中的第一个唯一字符](https://leetcode.com/problems/first-unique-character-in-a-string/)| [Swift](/LeetCodeProblems/String/387-First-Unique-Characterr-in-a-String.md) | Easy |
 | 125 | [Valid Palindrome / 验证回文串](https://leetcode.com/problems/valid-palindrome/)| [Swift](/LeetCodeProblems/String/125-Valid-Palindrome.md) | Easy |
 | 242 | [Valid Anagram / 有效的字母异位词](https://leetcode.com/problems/valid-anagram/)| [Swift](/LeetCodeProblems/String/242-Valid-Anagram.md) | Easy |
+| 344 | [Reverse String / 反转字符串](https://leetcode.com/problems/reverse-string/)| [Swift](/LeetCodeProblems/String/344-Reverse-String.md) | Easy |
+| 387 | [First Unique Character in a String / 字符串中的第一个唯一字符](https://leetcode.com/problems/first-unique-character-in-a-string/)| [Swift](/LeetCodeProblems/String/387-First-Unique-Characterr-in-a-String.md) | Easy |
+
+
 ## LinkedList / 链表
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
