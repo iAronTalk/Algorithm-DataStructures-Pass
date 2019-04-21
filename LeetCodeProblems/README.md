@@ -29,6 +29,13 @@
 | 80 | [Remove Duplicates from Sorted Array II / 删除排序数组中的重复项 II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)| [Swift](/LeetCodeProblems/Array/80-Remove-Duplicates-from-Sorted-Array-II.md) | Medium |
 | 88 | [Merge Sorted Array / 合并两个有序数组](https://leetcode.com/problems/merge-sorted-array/)| [Swift](/LeetCodeProblems/Array/88-Merge-Sorted-Array.md) | Easy |
 
+## String / 字符串
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 7 | [Reverse Integer / 整数反转](https://leetcode.com/problems/reverse-integer/)| [Swift](/LeetCodeProblems/String/7-Reverse-Integer.md) | Easy |
+| 344 | [Reverse String / 反转字符串](https://leetcode.com/problems/reverse-string/)| [Swift](/LeetCodeProblems/String/344-Reverse-String.md) | Easy |
+| 387 | [First Unique Character in a String / 字符串中的第一个唯一字符](https://leetcode.com/problems/first-unique-character-in-a-string/)| [Swift](/LeetCodeProblems/String/387-First-Unique-Characterr-in-a-String.md) | Easy |
+
 ## LinkedList / 链表
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
