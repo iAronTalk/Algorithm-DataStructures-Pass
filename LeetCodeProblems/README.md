@@ -44,6 +44,8 @@
 | - | ----- | -------- | ---------- |
 | 2 | [Add Two Numbers / 两数相加](https://leetcode.com/problems/add-two-numbers/)| [Swift](/LeetCodeProblems/LinkedList/2-Add-Two-Numbers.md) | Medium |
 | 19 | [Remove Nth Node From End of List / 删除链表的倒数第N个节点](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| [Swift](/LeetCodeProblems/LinkedList/19-Remove-Nth-Node-From-End-of-List.md) | Medium |
+| 21 | [Merge Two Sorted Lists / 合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/comments/)| [Swift](/LeetCodeProblems/LinkedList/21-Merge-Two-Sorted-Lists.md) | Medium |
+| 23 | [Merge k Sorted Lists / 合并K个排序链表](https://leetcode.com/problems/merge-k-sorted-lists/comments/)| [Swift](/LeetCodeProblems/LinkedList/23-Merge-k-Sorted-Lists.md) | Medium |
 | 24 | [Swap Nodes in Pairs / 两两交换链表中的节点](https://leetcode.com/problems/swap-nodes-in-pairs/)| [Swift](/LeetCodeProblems/LinkedList/24-Swap-Nodes-in-Pairs.md) | Medium |
 | 61 | [Rotate List / 旋转链表](https://leetcode.com/problems/rotate-list/)| [Swift](/LeetCodeProblems/LinkedList/61-Rotate-List.md) | Medium |
 | 82 | [Remove Duplicates from Sorted List II / 删除排序链表中的重复元素 II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)| [Swift](/LeetCodeProblems/LinkedList/82-Remove-Duplicates-from-Sorted-List-II.md) | Medium |
