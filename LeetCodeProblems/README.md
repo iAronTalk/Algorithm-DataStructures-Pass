@@ -70,3 +70,9 @@
 | 1 | [Two Sum / 两数之和](https://leetcode.com/problems/two-sum/)| [Swift](/LeetCodeProblems/HashTable/1-Two-Sum.md) | Easy |
 | 3 | [Longest Substring Without Repeating Characters / 无重复字符的最长子串](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| [Swift](/LeetCodeProblems/HashTable/3-Longest-Substring-Without-Repeating-Characters.md) | Medium |
 | 136 | [Single Number / 只出现一次的数字](https://leetcode.com/problems/single-number/)| [Swift](/LeetCodeProblems/HashTable/136-Single-Number.md) | Easy |
+
+## BinarySearch / 二分搜索
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 35 | [Search Insert Position / 搜索插入位置](https://leetcode.com/problems/search-insert-position/)| [Swift](/LeetCodeProblems/BinarySearch/35-Search-Insert-Position.md) | Easy |
+| 744 | [Find Smallest Letter Greater Than Target / 寻找比目标字母大的最小字母](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)| [Swift](/LeetCodeProblems/BinarySearch/744-Find-Smallest-Letter-Greater-Than-Target.md) | Easy |
