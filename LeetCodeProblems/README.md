@@ -76,3 +76,9 @@
 | - | ----- | -------- | ---------- |
 | 35 | [Search Insert Position / 搜索插入位置](https://leetcode.com/problems/search-insert-position/)| [Swift](/LeetCodeProblems/BinarySearch/35-Search-Insert-Position.md) | Easy |
 | 744 | [Find Smallest Letter Greater Than Target / 寻找比目标字母大的最小字母](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)| [Swift](/LeetCodeProblems/BinarySearch/744-Find-Smallest-Letter-Greater-Than-Target.md) | Easy |
+
+## DivideConquer / 分治
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 215 | [Kth Largest Element in an Array / 数组中的第K个最大元素](https://leetcode.com/problems/kth-largest-element-in-an-array/)| [Swift](/LeetCodeProblems/DivideConquer/215-Kth-Largest-Element-in-an-Array.md) | Medium |
+| 240 | [Search a 2D Matrix II / 搜索二维矩阵 II](https://leetcode.com/problems/search-a-2d-matrix-ii/)| [Swift](/LeetCodeProblems/DivideConquer/240-Search-a-2D-Matrix-II.md) | Medium |
