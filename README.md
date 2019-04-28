@@ -9,14 +9,14 @@
 极客时间视频代码为*Python*，剑指offer样例代码为*C*++，最近在学习Swift，决定就用Swift实现算法。当前学习目的为掌握基础，稳步提升，故涉及到LeetCode Hard级别的题目予以跳过，仅做了解思想。其他Easy/Medium级别的题目要独立完成。
 
 
-### [算法通关](/GeekTimeAlgorithmPass)
+### ![请点击](/Resources/root-1.png)[算法通关](/GeekTimeAlgorithmPass)
 
 [极客时间 - 算法通关 - 传送门](https://time.geekbang.org/course/intro/130)
 
-### [剑指offer](/⚔Offer)
+### ![请点击](/Resources/root-1.png)[剑指offer](/⚔Offer)
 [剑指offer - Github - 传送门](https://github.com/zhedahht/CodingInterviewChinese2)
 
-### [LeetCode](/LeetCodeProblems)
+### ![请点击](/Resources/root-1.png)[LeetCode](/LeetCodeProblems)
 
 [LeetCode-英文-传送门](https://leetcode.com)
 
