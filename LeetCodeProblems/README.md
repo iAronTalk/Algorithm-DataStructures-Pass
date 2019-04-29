@@ -97,3 +97,11 @@
 | 98 | [Validate Binary Search Tree / 验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)| [Swift](/LeetCodeProblems/DepthFirstSearch/98-Validate-Binary-Search-Tree.md) | Medium |
 | 113 | [Path Sum II / 路径总和 II](https://leetcode.com/problems/path-sum-ii/)| [Swift](/LeetCodeProblems/DepthFirstSearch/113-Path-Sum-II.md) | Medium |
 | 129 | [Sum Root to Leaf Numbers / 求根到叶子节点数字之和](https://leetcode.com/problems/sum-root-to-leaf-numbers/)| [Swift](/LeetCodeProblems/DepthFirstSearch/129-Sum-Root-to-Leaf-Numbers.md) | Medium |
+
+## DynamicProgramming / 动态规划
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 53 | [Maximum Subarray / 最大子序和](https://leetcode.com/problems/maximum-subarray/)| [Swift](/LeetCodeProblems/DynamicProgramming/53-Maximum-Subarray.md) | Easy |
+| 55 | [Jump Game / 跳跃游戏](https://leetcode.com/problems/jump-game/)| [Swift](/LeetCodeProblems/DynamicProgramming/55-Jump-Game.md) | Medium |
+| 121 | [Best Time to Buy and Sell Stock / 买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solution/)| [Swift](/LeetCodeProblems/DynamicProgramming/121-Best-Time-to-Buy-and-Sell-Stock.md) | Easy |
+| 122 | [Best Time to Buy and Sell Stock II / 买卖股票的最佳时机 II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Swift](/LeetCodeProblems/DynamicProgramming/122-Best-Time-to-Buy-and-Sell-Stock-II.md) | Easy |
