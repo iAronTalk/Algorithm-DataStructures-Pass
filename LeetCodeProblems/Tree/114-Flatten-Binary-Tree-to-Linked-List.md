@@ -35,6 +35,7 @@
 - 找到右子树的最后一个节点，将临时存起来的tempRight链接到最后一个节点。
 
 - **最重要的，针对每个非空节点进行上诉的相同操作**
+
 **CODINNG**
 
 ```
@@ -54,7 +55,7 @@
 class Solution {
     func flatten(_ root: TreeNode?) {
         guard let safeRoot = root else { return }
-        
+
         if safeRoot.left != nil {
             flatten(safeRoot.left)
         }
