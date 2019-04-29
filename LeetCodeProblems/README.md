@@ -62,6 +62,7 @@
 | 101 | [Symmetric Tree / 对称二叉树](https://leetcode.com/problems/symmetric-tree/)| [Swift](/LeetCodeProblems/Tree/101-Symmetric-Tree.md) | Easy |
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal / 从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal.md) | Medium |
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal / 从中序与后序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal.md) | Medium |
+| 114 | [Flatten Binary Tree to Linked List / 二叉树展开为链表](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)| [Swift](/LeetCodeProblems/Tree/114-Flatten-Binary-Tree-to-Linked-List.md) | Medium |
 
 
 ## HashTable / 哈希表
@@ -89,3 +90,10 @@
 | 11 | [Container With Most Water / 盛最多水的容器](https://leetcode.com/problems/container-with-most-water/)| [Swift](/LeetCodeProblems/TwoPointers/11-Container-With-Most-Water.md) | Medium |
 | 15 | [3Sum / 三数之和](https://leetcode.com/problems/3sum/)| [Swift](/LeetCodeProblems/TwoPointers/15-3-Sum.md) | Medium |
 | 16 | [3Sum Closest / 最接近的三数之和](https://leetcode.com/problems/3sum-closest/)| [Swift](/LeetCodeProblems/TwoPointers/16-3Sum-Closest.md) | Medium |
+
+## DepthFirstSearch / 深度优先搜索
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 98 | [Validate Binary Search Tree / 验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)| [Swift](/LeetCodeProblems/DepthFirstSearch/98-Validate-Binary-Search-Tree.md) | Medium |
+| 113 | [Path Sum II / 路径总和 II](https://leetcode.com/problems/path-sum-ii/)| [Swift](/LeetCodeProblems/DepthFirstSearch/113-Path-Sum-II.md) | Medium |
+| 129 | [Sum Root to Leaf Numbers / 求根到叶子节点数字之和](https://leetcode.com/problems/sum-root-to-leaf-numbers/)| [Swift](/LeetCodeProblems/DepthFirstSearch/129-Sum-Root-to-Leaf-Numbers.md) | Medium |
