@@ -98,7 +98,7 @@
 | 113 | [Path Sum II / 路径总和 II](https://leetcode.com/problems/path-sum-ii/)| [Swift](/LeetCodeProblems/DepthFirstSearch/113-Path-Sum-II.md) | Medium |
 | 129 | [Sum Root to Leaf Numbers / 求根到叶子节点数字之和](https://leetcode.com/problems/sum-root-to-leaf-numbers/)| [Swift](/LeetCodeProblems/DepthFirstSearch/129-Sum-Root-to-Leaf-Numbers.md) | Medium |
 
-## BreadthFirstSearch / 深度优先搜索
+## BreadthFirstSearch / 广度优先搜索
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
 | 102 | [Binary Tree Level Order Traversal / 二叉树的层次遍历](https://leetcode.com/problems/binary-tree-level-order-traversal/)| [Swift](/LeetCodeProblems/BreadthFirstSearch/102-Binary-Tree-Level-Order-Traversal.md) | Medium |
@@ -113,3 +113,9 @@
 | 55 | [Jump Game / 跳跃游戏](https://leetcode.com/problems/jump-game/)| [Swift](/LeetCodeProblems/DynamicProgramming/55-Jump-Game.md) | Medium |
 | 121 | [Best Time to Buy and Sell Stock / 买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| [Swift](/LeetCodeProblems/DynamicProgramming/121-Best-Time-to-Buy-and-Sell-Stock.md) | Easy |
 | 122 | [Best Time to Buy and Sell Stock II / 买卖股票的最佳时机 II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Swift](/LeetCodeProblems/DynamicProgramming/122-Best-Time-to-Buy-and-Sell-Stock-II.md) | Easy |
+
+## Recursion / 递归
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 46 | [Permutations / 全排列](https://leetcode.com/problems/permutations/)| [Swift](/LeetCodeProblems/Recursion/46-Permutations.md) | Medium |
+| 77 | [Combinations / 组合](https://leetcode.com/problems/combinations/)| [Swift](/LeetCodeProblems/Recursion/77-Combinations.md) | Medium |
