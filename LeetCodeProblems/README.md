@@ -98,6 +98,14 @@
 | 113 | [Path Sum II / 路径总和 II](https://leetcode.com/problems/path-sum-ii/)| [Swift](/LeetCodeProblems/DepthFirstSearch/113-Path-Sum-II.md) | Medium |
 | 129 | [Sum Root to Leaf Numbers / 求根到叶子节点数字之和](https://leetcode.com/problems/sum-root-to-leaf-numbers/)| [Swift](/LeetCodeProblems/DepthFirstSearch/129-Sum-Root-to-Leaf-Numbers.md) | Medium |
 
+## BreadthFirstSearch / 深度优先搜索
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 102 | [Binary Tree Level Order Traversal / 二叉树的层次遍历](https://leetcode.com/problems/binary-tree-level-order-traversal/)| [Swift](/LeetCodeProblems/BreadthFirstSearch/102-Binary-Tree-Level-Order-Traversal.md) | Medium |
+| 103 | [Binary Tree Zigzag Level Order Traversal / 二叉树的锯齿形层次遍历](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)| [Swift](/LeetCodeProblems/BreadthFirstSearch/103-Binary-Tree-Zigzag-Level-Order-Traversal.md) | Medium |
+| 111 | [Minimum Depth of Binary Tree / 二叉树的最小深度](https://leetcode.com/problems/minimum-depth-of-binary-tree/)| [Swift](/LeetCodeProblems/BreadthFirstSearch/111-Minimum-Depth-of-Binary-Tree.md) | Easy |
+| 127 | [Word Ladder / 单词接龙](https://leetcode.com/problems/word-ladder/)| [Swift](/LeetCodeProblems/BreadthFirstSearch/127-Word-Ladder.md) | Medium |
+
 ## DynamicProgramming / 动态规划
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
