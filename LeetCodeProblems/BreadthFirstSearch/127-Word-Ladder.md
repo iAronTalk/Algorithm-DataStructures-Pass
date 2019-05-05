@@ -60,18 +60,16 @@ wordList = ["hot","dot","dog","lot","log"]
  class Solution {
     func ladderLength(_ beginWord: String, _ endWord: String, _ wordList: [String]) -> Int {
 
-        if !wordList.contains(endWord) { return 0 }
+        if !wordList.contains(endWord) { return 0 } //如果目标顶点不在图中，直接返回0
 
-        let wordListSet = Set(wordList)
-
-        var visited = [String: Int]()
-        var queue = [String]()
+        let wordListSet = Set(wordList) //替换掉题目中List结构，加速查找
+        var visited = [String: Int]() //用来存储已访问的节点，并存储其在路径上的位置
+        var queue = [String]()  //构建队列，实现广度优先遍历
 
         visited[beginWord] = 1
         queue.append(beginWord)
 
         let alphabet: [Character] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-
         while !queue.isEmpty {
             let word = queue.removeFirst()
             let level = visited[word]!
@@ -84,21 +82,19 @@ wordList = ["hot","dot","dog","lot","log"]
                     }
 
                     var tempWordArray = wordArray
-                    tempWordArray[i] = item
+                    tempWordArray[i] = item  //对于每一位字母，分别替换成另外25个字母
                     let newWord = String(tempWordArray)
                     if newWord == endWord {
-                        return visited[word]! + 1
+                        return visited[word]! + 1  //如果已经抵达目标节点，返回当前路径长度+1
                     }
 
-                    if wordListSet.contains(newWord) && !visited.keys.contains(newWord) {
-                        visited[newWord] = level + 1
-                        queue.append(newWord)
+                    if wordListSet.contains(newWord) && !visited.keys.contains(newWord) {  //如果字典中存在邻接节点，且这个邻接节点还未被访问
+                        visited[newWord] = level + 1  //标记这个邻接节点为已访问，记录其在路径上的位置
+                        queue.append(newWord)  //加入队列，以供广度搜索
                     }
                 }
             }
-
         }
-
         return 0
     }
 }
