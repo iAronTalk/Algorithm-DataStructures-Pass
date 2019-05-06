@@ -119,3 +119,9 @@
 | - | ----- | -------- | ---------- |
 | 46 | [Permutations / 全排列](https://leetcode.com/problems/permutations/)| [Swift](/LeetCodeProblems/Recursion/46-Permutations.md) | Medium |
 | 77 | [Combinations / 组合](https://leetcode.com/problems/combinations/)| [Swift](/LeetCodeProblems/Recursion/77-Combinations.md) | Medium |
+
+## BitManipulation / 位运算
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 78 | [Subsets / 子集](https://leetcode.com/problems/subsets/)| [Swift](/LeetCodeProblems/BitManipulation/78-Subsets.md) | Medium |
+| 137 | [Single Number II / 只出现一次的数字](https://leetcode.com/problems/single-number-ii/)| [Swift](/LeetCodeProblems/BitManipulation/137-Singl-Number-II.md) | Medium |

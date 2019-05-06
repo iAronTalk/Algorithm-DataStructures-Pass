@@ -17,6 +17,7 @@
 
 **CODINNG**
 
+*哈希表*
 ```
 class Solution {
     func singleNumber(_ nums: [Int]) -> Int {
@@ -36,6 +37,19 @@ class Solution {
         }
 
         return 0
+    }
+}
+```
+
+*异或*
+```
+class Solution {
+    func singleNumber(_ nums: [Int]) -> Int {
+        var res = 0
+        for item in nums {
+            res = res ^ item
+        }
+        return res
     }
 }
 ```
