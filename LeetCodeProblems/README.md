@@ -125,6 +125,7 @@
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
 | 39 | [Combination Sum / 组合总和](https://leetcode.com/problems/combination-sum/)| [Swift](/LeetCodeProblems/Backtracking/39-Combination-Sum.md) | Medium |
+| 131 | [Palindrome Partitioning / 分割回文串](https://leetcode.com/problems/palindrome-partitioning/)| [Swift](/LeetCodeProblems/Backtracking/131-Palindrome-Partitioning.md) | Medium |
 
 
 ## BitManipulation / 位运算
