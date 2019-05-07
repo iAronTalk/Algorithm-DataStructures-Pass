@@ -113,6 +113,7 @@
 | 55 | [Jump Game / 跳跃游戏](https://leetcode.com/problems/jump-game/)| [Swift](/LeetCodeProblems/DynamicProgramming/55-Jump-Game.md) | Medium |
 | 121 | [Best Time to Buy and Sell Stock / 买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| [Swift](/LeetCodeProblems/DynamicProgramming/121-Best-Time-to-Buy-and-Sell-Stock.md) | Easy |
 | 122 | [Best Time to Buy and Sell Stock II / 买卖股票的最佳时机 II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Swift](/LeetCodeProblems/DynamicProgramming/122-Best-Time-to-Buy-and-Sell-Stock-II.md) | Easy |
+| 935 | [Knight Dialer / 骑士拨号器](https://leetcode.com/problems/knight-dialer/)| [Swift](/LeetCodeProblems/DynamicProgramming/935-Knight-Dialer.md) | Medium |
 
 ## Recursion / 递归
 | # | Title | Solution | Difficulty |
