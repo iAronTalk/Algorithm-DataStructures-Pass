@@ -29,14 +29,14 @@
 
 **CODINNG**
 
-*位运算*，详细解答参考：![详细解答参考](https://blog.csdn.net/gh6267/article/details/88116764)
+*位运算*，详细解答参考：[详细解答参考](https://blog.csdn.net/gh6267/article/details/88116764)
 ```
 class Solution {
     func subsets(_ nums: [Int]) -> [[Int]] {
         if nums.count == 0 {
             return [[]]
         }
-        
+
         var res = [[Int]]()
         var temp = [Int]()
         let all = 1 << nums.count

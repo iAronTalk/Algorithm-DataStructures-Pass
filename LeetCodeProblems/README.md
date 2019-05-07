@@ -120,6 +120,12 @@
 | 46 | [Permutations / 全排列](https://leetcode.com/problems/permutations/)| [Swift](/LeetCodeProblems/Recursion/46-Permutations.md) | Medium |
 | 77 | [Combinations / 组合](https://leetcode.com/problems/combinations/)| [Swift](/LeetCodeProblems/Recursion/77-Combinations.md) | Medium |
 
+## Backtracking / 回溯
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 39 | [Combination Sum / 组合总和](https://leetcode.com/problems/combination-sum/)| [Swift](/LeetCodeProblems/Backtracking/39-Combination-Sum.md) | Medium |
+
+
 ## BitManipulation / 位运算
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
