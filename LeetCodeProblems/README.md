@@ -97,6 +97,7 @@
 | 98 | [Validate Binary Search Tree / 验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)| [Swift](/LeetCodeProblems/DepthFirstSearch/98-Validate-Binary-Search-Tree.md) | Medium |
 | 113 | [Path Sum II / 路径总和 II](https://leetcode.com/problems/path-sum-ii/)| [Swift](/LeetCodeProblems/DepthFirstSearch/113-Path-Sum-II.md) | Medium |
 | 129 | [Sum Root to Leaf Numbers / 求根到叶子节点数字之和](https://leetcode.com/problems/sum-root-to-leaf-numbers/)| [Swift](/LeetCodeProblems/DepthFirstSearch/129-Sum-Root-to-Leaf-Numbers.md) | Medium |
+| 257 | [Binary Tree Paths / 二叉树的所有路径](https://leetcode.com/problems/binary-tree-paths/)| [Swift](/LeetCodeProblems/DepthFirstSearch/257-Binary-Tree-Paths.md) | Easy |
 
 ## BreadthFirstSearch / 广度优先搜索
 | # | Title | Solution | Difficulty |
