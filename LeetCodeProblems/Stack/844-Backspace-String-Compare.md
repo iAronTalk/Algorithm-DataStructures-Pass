@@ -39,6 +39,7 @@ S 和 T 只含有小写字母以及字符 '#'。
 
 **CODINNG**
 
+```
 class Solution {
     func backspaceCompare(_ S: String, _ T: String) -> Bool {
         var stackS = [Character]()
