@@ -132,3 +132,8 @@
 | - | ----- | -------- | ---------- |
 | 78 | [Subsets / 子集](https://leetcode.com/problems/subsets/)| [Swift](/LeetCodeProblems/BitManipulation/78-Subsets.md) | Medium |
 | 137 | [Single Number II / 只出现一次的数字](https://leetcode.com/problems/single-number-ii/)| [Swift](/LeetCodeProblems/BitManipulation/137-Singl-Number-II.md) | Medium |
+
+## Stack / 栈
+| # | Title | Solution | Difficulty |
+| - | ----- | -------- | ---------- |
+| 844 | [Backspace String Compare / 比较含退格的字符串](https://leetcode.com/problems/backspace-string-compare/)| [Swift](/LeetCodeProblems/Stack/844-Backspace-String-Compare.md) | Medium |
