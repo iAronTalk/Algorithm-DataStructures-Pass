@@ -39,30 +39,31 @@
  *     }
  *
  class Solution {
-     var res = [String]()
-     func helper(_ root: TreeNode, _ s: String) -> Void {
-         if root.left == nil && root.right == nil {
-             res.append(s + String(root.val))
-             return
-         }
+    var res = [String]()
+    func helper(_ root: TreeNode, _ s: String) -> Void {
+        if root.left == nil && root.right == nil {
+            res.append(s + String(root.val))
+            return
+        }
 
-         var localS = s
-         if root.left != nil {
-             localS = localS + String(root.val) + "->"
-             helper(root.left!, localS)
-         }
+        var localLeft = s
+        if root.left != nil {
+            localLeft = localLeft + String(root.val) + "->"
+            helper(root.left!, localLeft)
+        }
 
-         if root.right != nil {
-             localS = localS + String(root.val) + "->"
-             helper(root.right!, localS)
-         }
-     }
+        var localRight = s
+        if root.right != nil {
+            localRight = localRight + String(root.val) + "->"
+            helper(root.right!, localRight)
+        }
+    }
 
-     func binaryTreePaths(_ root: TreeNode?) -> [String] {
-         guard let safeRoot = root else { return [] }
-         let temp = ""
-         helper(safeRoot, temp)
-         return res
-     }
- }
+    func binaryTreePaths(_ root: TreeNode?) -> [String] {
+        guard let safeRoot = root else { return [] }
+        let temp = ""
+        helper(safeRoot, temp)
+        return res
+    }
+}
 ```
