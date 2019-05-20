@@ -58,6 +58,8 @@
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
 | 94 | [Binary Tree Inorder Traversal / 二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/94-Binary-Tree-Inorder-Traversal.md) | Medium |
+| 95 | [Unique Binary Search Trees II / 不同的二叉搜索树 II](https://leetcode.com/problems/unique-binary-search-trees-ii/)| [Swift](/LeetCodeProblems/Tree/95-Unique-Binary-Search-Trees-II.md) | Medium |
+| 96 | [Unique Binary Search Trees / 不同的二叉搜索树](https://leetcode.com/problems/unique-binary-search-trees/)| [Swift](/LeetCodeProblems/Tree/96-Unique-Binary-Search-Trees.md) | Medium |
 | 100 | [Same Tree / 相同的树](https://leetcode.com/problems/same-tree/)| [Swift](/LeetCodeProblems/Tree/100-Same-Tree.md) | Easy |
 | 101 | [Symmetric Tree / 对称二叉树](https://leetcode.com/problems/symmetric-tree/)| [Swift](/LeetCodeProblems/Tree/101-Symmetric-Tree.md) | Easy |
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal / 从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal.md) | Medium |
