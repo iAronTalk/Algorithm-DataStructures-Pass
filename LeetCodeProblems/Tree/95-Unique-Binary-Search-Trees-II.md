@@ -27,7 +27,7 @@
 
 **所有可能解法**
 
-- 递归
+- 递归，[参考链接](https://www.laojiyou.com/books/shujujgsf/exhaustive_search/unique_binary_search_trees_ii.html)。
 - DP
 
 **CODINNG**
