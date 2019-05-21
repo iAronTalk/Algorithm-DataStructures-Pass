@@ -49,4 +49,25 @@ class Solution {
        return res
    }
 }
+
+// 迭代
+class Solution {
+    func preorderTraversal(_ root: TreeNode?) -> [Int] {
+        guard let safeRoot = root else { return [] }
+        var res = [Int]()
+        var stack = [TreeNode]()
+        stack.append(safeRoot)
+        while !stack.isEmpty {
+            let cur = stack.removeLast()
+            res.append(cur.val)
+            if cur.right != nil {
+                stack.append(cur.right!)
+            }
+            if cur.left != nil {
+                stack.append(cur.left!)
+            }
+        }
+        return res
+    }
+ }
 ```
