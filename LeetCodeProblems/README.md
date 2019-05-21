@@ -68,7 +68,7 @@
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal / 从中序与后序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal.md) | Medium |
 | 114 | [Flatten Binary Tree to Linked List / 二叉树展开为链表](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)| [Swift](/LeetCodeProblems/Tree/114-Flatten-Binary-Tree-to-Linked-List.md) | Medium |
 | 144 | [Binary Tree Preorder Traversal / 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)| [Swift](/LeetCodeProblems/Tree/144-Binary-Tree-Preorder-Traversal.md) | Medium |
-
+| 226 | [Invert Binary Tree / 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)| [Swift](/LeetCodeProblems/Tree/226-Invert-Binary-Tree.md) | Medium |
 
 ## HashTable / 哈希表
 | # | Title | Solution | Difficulty |
