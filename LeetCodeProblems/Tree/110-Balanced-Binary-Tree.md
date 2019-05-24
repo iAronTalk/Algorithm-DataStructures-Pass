@@ -39,6 +39,8 @@
 
 - 递归
 
+- github上其他优秀解法:https://leetcode.com/problems/balanced-binary-tree/discuss/157645/Python-Tree-tm。
+
 **CODINNG**
 
 *递归*
