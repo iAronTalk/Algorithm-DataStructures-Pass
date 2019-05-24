@@ -28,8 +28,8 @@
 | 34 | [Find First And Last Position Of Element in Sorted Array / 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [Swift](/LeetCodeProblems/Array/34-Find-First-And-Last-Position-Of-Element-in-Sorted-Array.md) | Medium |
 | 80 | [Remove Duplicates from Sorted Array II / 删除排序数组中的重复项 II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)| [Swift](/LeetCodeProblems/Array/80-Remove-Duplicates-from-Sorted-Array-II.md) | Medium |
 | 88 | [Merge Sorted Array / 合并两个有序数组](https://leetcode.com/problems/merge-sorted-array/)| [Swift](/LeetCodeProblems/Array/88-Merge-Sorted-Array.md) | Easy |
-| 349 | [Intersection of Two Arrays / 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)| [Swift](/LeetCodeProblems/Array/349-Intersection-of-Two-Arrays.md) | Easy |
-| 350 | [Intersection of Two Arrays II / 两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)| [Swift](/LeetCodeProblems/Array/350-Intersection-of-Two-Arrays-II.md) | Easy |
+| 349 | [Intersection of Two Arrays / 两个数组的交集](https://leetcode.com/problems/intersection-of-two-arrays/)| [Swift](/LeetCodeProblems/Array/349-Intersection-of-Two-Arrays.md) | Easy |
+| 350 | [Intersection of Two Arrays II / 两个数组的交集 II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)| [Swift](/LeetCodeProblems/Array/350-Intersection-of-Two-Arrays-II.md) | Easy |
 
 ## String / 字符串
 | # | Title | Solution | Difficulty |
@@ -66,10 +66,11 @@
 | 101 | [Symmetric Tree / 对称二叉树](https://leetcode.com/problems/symmetric-tree/)| [Swift](/LeetCodeProblems/Tree/101-Symmetric-Tree.md) | Easy |
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal / 从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| [Swift](/LeetCodeProblems/Tree/105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal.md) | Medium |
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal / 从中序与后序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/106-Construct-Binary-Tree-from-Inorder-and-Postorder-Traversal.md) | Medium |
-| 108 | [Convert Sorted Array to Binary Search Tree / 将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/)| [Swift](/LeetCodeProblems/Tree/108-Convert-Sorted-Array-to-Binary-Search-Tree.md) | Easy |
+| 108 | [Convert Sorted Array to Binary Search Tree / 将有序数组转换为二叉搜索树](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)| [Swift](/LeetCodeProblems/Tree/108-Convert-Sorted-Array-to-Binary-Search-Tree.md) | Easy |
+| 110 | [Balanced Binary Tree / 平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)| [Swift](/LeetCodeProblems/Tree/110-Balanced-Binary-Tree.md) | Easy |
 | 114 | [Flatten Binary Tree to Linked List / 二叉树展开为链表](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)| [Swift](/LeetCodeProblems/Tree/114-Flatten-Binary-Tree-to-Linked-List.md) | Medium |
-| 144 | [Binary Tree Preorder Traversal / 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)| [Swift](/LeetCodeProblems/Tree/144-Binary-Tree-Preorder-Traversal.md) | Medium |
-| 226 | [Invert Binary Tree / 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)| [Swift](/LeetCodeProblems/Tree/226-Invert-Binary-Tree.md) | Medium |
+| 144 | [Binary Tree Preorder Traversal / 二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal/)| [Swift](/LeetCodeProblems/Tree/144-Binary-Tree-Preorder-Traversal.md) | Medium |
+| 226 | [Invert Binary Tree / 翻转二叉树](https://leetcode.com/problems/invert-binary-tree/)| [Swift](/LeetCodeProblems/Tree/226-Invert-Binary-Tree.md) | Medium |
 
 ## HashTable / 哈希表
 | # | Title | Solution | Difficulty |
