@@ -22,6 +22,7 @@
 
 [LeetCode-中文-传送门](https://leetcode-cn.com)
 
+### [数据结构与算法之美](/BeautyOfAlgorithm&DataStructures)
 
 上传到仓库一方面监督学习，做好笔记，另一边面也希望可以帮助到有缘看到的你。
 努力，加油。
