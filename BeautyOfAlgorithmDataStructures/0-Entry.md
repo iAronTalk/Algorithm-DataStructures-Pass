@@ -12,22 +12,4 @@
 
 ### <img src="/Resources/0-入门-beauty-01.png" disabled="true" width="50" hegiht="50" align=center />
 
-![LeetCode - Swift](/Resources/0-入门-beauty-01.png)
-
-## Leetcode真题
-
-**NO.-name-level**
-
-> 明确题目
-
-> 所有可能解法
-
--
--
-
-> CODINNG
-
-```
-
-```
-> TESTING：leetcode
+![LeetCode - Swift](/BeautyOfAlgorithmDataStructures/Resources/0-入门-beauty-01.png)

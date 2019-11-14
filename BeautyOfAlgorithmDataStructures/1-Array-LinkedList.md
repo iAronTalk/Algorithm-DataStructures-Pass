@@ -2,7 +2,7 @@
 
 ### 线性表
 
-![线性表](/Resources/1-Array-LinkedList-beauty-01.png)
+![线性表](/BeautyOfAlgorithmDataStructures/Resources/1-Array-LinkedList-beauty-01.png)
 
 > 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据，除了数组，链表、队列、栈等也是线性表结构。
 
@@ -29,7 +29,7 @@
 
 ### 非线性表
 
-![非线性表](/Resources/1-Array-LinkedList-beauty-02.png)
+![非线性表](/BeautyOfAlgorithmDataStructures/Resources/1-Array-LinkedList-beauty-02.png)
 
 ### 低效的插入和删除
 
