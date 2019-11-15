@@ -12,4 +12,4 @@
 
 ### <img src="/Resources/0-入门-beauty-01.png" disabled="true" width="50" hegiht="50" align=center />
 
-![LeetCode - Swift](/BeautyOfAlgorithmDataStructures/Resources/0-入门-beauty-01.png)
+![LeetCode - Swift](/BeautyOfAlgorithmDataStructures/Resources/0-Entry-beauty-01.png)
