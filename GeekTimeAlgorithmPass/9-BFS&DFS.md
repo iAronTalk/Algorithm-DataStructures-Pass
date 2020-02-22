@@ -7,20 +7,21 @@
 ```
 visited = set()
 def BFS(graph, start, end):
+    if graph.root is None:
+      return []
 
     queue = []
     queue.append([start])
-    visited.add(start)
-
     while queue:
         node = queue.pop()
         visited.add(node)
 
         process(node)
-        nodes = generateRelatedNodes(node)
-        queue.push(nodes)
+        nodeChildren = generateRelatedNodes(node)
+        queue.push(nodeChildren)
 
     //other process work
+    return processedNodes
 ```
 
 **深度优先搜索（Deep First Search）**
@@ -29,35 +30,39 @@ def BFS(graph, start, end):
 
 *"DFS"模板*
 ```
-//DFS-递归写法
+//DFS-递归写法，本身递归使用的栈的存储结构来存储递归的事件。
 visited = set()
 def DFS(node,visited):
-    visited.add(node)
+  if tree.root is None:
+    return []
 
-    //processs node
-for next_node in node.children():
-    if not next_node in visited:
+    visited.add(node)
+    //processs node...
+    for next_node in node.children():
+      if not next_node in visited:
         DFS(next_node,visited)
+    return processedNodes
 ```
 
 ```
 //DFS-非递归写法，常用的仍是递归形式的
 visited = set()
 def DFS(self,tree):
-
-    if tree.root is Node:
+    if tree.root is None:
         return []
 
-    visited, stack = [], [tree.root]
-
+    visited = []
+    stack = [tree.root]
     while stack:
         node = stack.pop()
-        visited.add(node)
+        if !visited.contained(node)
+          visited.add(node)
 
         //process node
         process(node)
-        nodes = generatedRelatedNodes(node)
-        stack.push(nodes)
+
+        nodeChildren = generatedRelatedNodes(node)
+        stack.push(nodeChildren) //这个地方要人为干涉，先push人为右边的节点，然是是左边的节点。
 
     //other process work
 ```
@@ -67,6 +72,18 @@ def DFS(self,tree):
 两种搜索算法对比如下图。
 
 ![](/GeekTimeAlgorithmPass/Resources/9-BFS&DFS-1.png)
+
+**注意：关于visited Set的使用问题**
+> 如果是对于图的遍历，那么这个visitedset就是必不可少的。
+> 如果是对树的遍历，那么这个visitedset就是可以省略。
+
+**注意：BFS遍历和DFS非递归遍历，generatedRelatedNodesd如何处理，如何处理层**
+> generateRelatedNodes和node.pop()操作是有关系的。
+> BFS,DFS非递归的方式，法一：node绑定层，使用特殊的容器，容器元素为【int:int】或者queue本身就存放数组，哨兵的概念。法二：记录层的元素个数，遍历全部该层的元素。
+> DFS递归的方式，法三层作为参数传递。
+> BFS，只有只用法一，DFS，使用法一和法三。
+
+**递归终止条件尽量往前面写，方便思考和控制**
 ## Leetcode真题
 
 **102-二叉树的层次遍历-Medium**
@@ -186,10 +203,29 @@ class Solution {
 //TreeNode数据结构同上题目
 class Solution {
     func maxDepth(_ root: TreeNode?) -> Int {
-        if root == nil {
-            return 0
+      guard let safeRoot = root else { return 0 }
+      return 1 + max(maxDepth(safeRoot.left),maxDepth(safeRoot.right))
+    }
+
+    //BFS做法
+    func maxDepth(_ root: TreeNode?) -> Int {
+        guard let safeRoot = root else { return 0 }
+        var queue = [TreeNode]()
+        queue.append(safeRoot)
+        var level = 0
+        while queue.count > 0 {
+            for _ in 0..<queue.count {
+                let node = queue.removeFirst()
+                if node.left != nil {
+                    queue.append(node.left!)
+                }
+                if node.right != nil {
+                    queue.append(node.right!)
+                }
+            }
+            level += 1
         }
-        return 1 + max(maxDepth(root!.left),maxDepth(root!.right))
+        return level
     }
 }
 ```
@@ -230,6 +266,30 @@ class Solution {
             return 1 + min(left,right)
         }
     }
+    //BFS做法
+    func minDepth(_ root: TreeNode?) -> Int {
+       guard let safeRoot = root else { return 0 }
+       var queue = [TreeNode]()
+       queue.append(safeRoot)
+       var minLevel = 0
+       while queue.count > 0 {
+           minLevel += 1
+           for _ in 0..<queue.count {
+               let node = queue.removeFirst()
+               if node.left == nil && node.right == nil {
+                   queue.removeAll()//这一步很重要，退出while循环
+                   break
+               }
+               if node.left != nil {
+                   queue.append(node.left!)
+               }
+               if node.right != nil {
+                   queue.append(node.right!)
+               }
+           }
+       }
+       return minLevel
+   }
 }
 ```
 > TESTING：leetcode
@@ -243,12 +303,14 @@ class Solution {
 
 > 所有可能解法
 
-- 递归 + 剪枝
+- 递归 + 剪枝 1）局部不满足条件的直接pass，2）左右只能各n个。
+
+- 这道题目如果让自己想可能会有问题，所以暂请记下解题步骤慢慢体会递归和剪枝。
 
 > CODINNG
 
 ```
-】class Solution {
+  class Solution {
     var result = [String]()
 
     func generateParenthesis(_ n: Int) -> [String] {
@@ -270,6 +332,29 @@ class Solution {
         if right > left {
             _gen(sub + ")", left: left, right: right - 1)
         }
+    }
+
+    //与方法一本质一致，注意递归终止条件放置于前面，简化思考路径。
+    var res = [String]()
+    func _gen(_ subString: String,_ n: Int,_ left: Int, _ right: Int) -> Void {
+        if left == n && right == n {
+            res.append(subString)
+            return
+        }
+        if left < n {
+            _gen(subString + "(", n, left + 1, right)
+        }
+        if right < left && right < n {
+            _gen(subString + ")", n, left, right + 1)
+        }
+    }
+    func generateParenthesis(_ n: Int) -> [String] {
+        if n <= 0 {
+            return []
+        }
+        _gen("", n, 0, 0)
+        return res
+
     }
 }
 ```
