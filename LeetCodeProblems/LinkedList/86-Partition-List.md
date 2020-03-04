@@ -22,6 +22,7 @@ class Solution {
         if head == nil {
             return nil
         }
+        //使用两个哑巴节点，不然真的太难了
         let before_head = ListNode(0)
         var before = before_head
         let after_head = ListNode(0)
