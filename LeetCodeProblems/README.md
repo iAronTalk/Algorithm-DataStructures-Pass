@@ -57,7 +57,9 @@
 | 206 | [Reverse Linked List / 反转链表](https://leetcode.com/problems/reverse-linked-list/)| [Swift](/LeetCodeProblems/LinkedList/206-Reverse-Linked-List.md) | Easy |
 | 237 | [Delete Node in a Linked List / 删除链表中的节点](https://leetcode.com/problems/delete-node-in-a-linked-list/)| [Swift](/LeetCodeProblems/LinkedList/237-Delete-Node-in-a-Linked-List.md) | Easy |
 | 86 | [Partition List / 分隔链表](https://leetcode.com/problems/partition-list/)| [Swift](/LeetCodeProblems/LinkedList/86-Partition-List.md) | Medium |
-| 143 | [Reorder Lis / 重排链表](https://leetcode.com/problems/reorder-list/)| [Swift](/LeetCodeProblems/LinkedList/143-reorder-lis.md) | Medium |
+| 143 | [Reorder List / 重排链表](https://leetcode.com/problems/reorder-list/)| [Swift](/LeetCodeProblems/LinkedList/143-reorder-list.md) | Medium |
+| 143 | [Reverse List II / 翻转链表ii](https://leetcode-cn.com/problems/reverse-linked-list-ii/)| [Swift](/LeetCodeProblems/LinkedList/92-reverse-linked-list-ii.md) | Medium |
+
 ## Tree / 树
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
