@@ -153,3 +153,6 @@
 | 155 | [Min Stack / 最小栈](https://leetcode.com/problems/min-stack/)| [Swift](/LeetCodeProblems/Stack/155-Min-Stack.md) | Easy |
 | 227 | [Basic Calculator II / 基本计算器 II](https://leetcode.com/problems/basic-calculator-ii/)| [Swift](/LeetCodeProblems/Stack/227-Basic-Calculator-IIk.md) | Medium |
 | 844 | [Backspace String Compare / 比较含退格的字符串](https://leetcode.com/problems/backspace-string-compare/)| [Swift](/LeetCodeProblems/Stack/844-Backspace-String-Compare.md) | Medium |
+
+## Math / 数学
+| 1103 | [Distribute Candies to People ii / 分糖果ii](https://leetcode.com/problems/distribute-candies-to-people/)| [Swift](/LeetCodeProblems/Math/1103-distribute-candies-to-people.md) | Easy |
