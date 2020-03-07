@@ -47,7 +47,7 @@ class Solution {
         if grid.count == 0 {
             return 0
         }
-        
+
         var res = 0
         var queue = [Node]()
         var visited = [Node]()
@@ -88,6 +88,14 @@ class Solution {
 class Solution {
     let dx = [0, 1, 0, -1]
     let dy = [1, 0, -1, 0]
+    struct Node: Equatable {
+        var col: Int
+        var row: Int
+        init(_ row: Int, _ col: Int) {
+            self.col = col
+            self.row = row
+        }
+    }
     func numIslands(_ grid: [[Character]]) -> Int {
         if grid.count == 0 {
             return 0
