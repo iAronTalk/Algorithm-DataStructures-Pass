@@ -1,55 +1,58 @@
 import UIKit
 
 /*
- 面试题57 - II. 和为s的连续正数序列
- 
- 输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。
+ 请定义一个队列并实现函数 max_value 得到队列里的最大值，要求函数max_value、push_back 和 pop_front 的均摊时间复杂度都是O(1)。
 
- 序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
-
-  
+ 若队列为空，pop_front 和 max_value 需要返回 -1
 
  示例 1：
 
- 输入：target = 9
- 输出：[[2,3,4],[4,5]]
+ 输入:
+ ["MaxQueue","push_back","push_back","max_value","pop_front","max_value"]
+ [[],[1],[2],[],[],[]]
+ 输出: [null,null,null,2,1,2]
  示例 2：
 
- 输入：target = 15
- 输出：[[1,2,3,4,5],[4,5,6],[7,8]]
-  
-
- 限制：
-
- 1 <= target <= 10^5
+ 输入:
+ ["MaxQueue","pop_front","max_value"]
+ [[],[],[]]
+ 输出: [null,-1,-1]
 
  */
 
-//解法：滑动窗口
-//leetcode链接：https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/
-class Solution {
-    func findContinuousSequence(_ target: Int) -> [[Int]] {
-    var left = 1
-    var right = 1
-    var sum = 0
+//解法：这是一道看似简单，实际不简单的题目，双端队列来更新max中的值，有新值进入后，把小于这个值的所有数全部抛出，然后无论如何把这个数放进去。保持队列的前端放置的最大。
+//leetcode链接：https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/
+class MaxQueue {
+    var max = [Int]()
+    var internalQueue = [Int]()
     
-    var res = [[Int]]()
-    while left <= target / 2 {
-        if sum < target {
-            sum += right
-            right += 1
-        } else if sum > target {
-            sum -= left
-            left += 1
-        } else {
-            var sumArray = [Int]()
-            for i in left..<right {
-                sumArray.append(i)
-            }
-            res.append(sumArray)
-            sum -= left
-            left += 1
-        }
+    init() {
+
     }
-    return res
+    
+    func max_value() -> Int {
+        if internalQueue.count == 0 {
+            return -1
+        }
+        return max.first!
+    }
+    
+    func push_back(_ value: Int) {
+        while max.count > 0 && value > max.last! {
+            max.removeLast()
+        }
+        max.append(value)
+        internalQueue.append(value)
+    }
+    
+    func pop_front() -> Int {
+        if internalQueue.count == 0 {
+            return -1
+        }
+        let front = internalQueue.removeFirst()
+        if front == max.first {
+            max.removeFirst()
+        }
+        return front
+    }
 }
