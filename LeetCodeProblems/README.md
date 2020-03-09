@@ -139,7 +139,7 @@
 | - | ----- | -------- | ---------- |
 | 46 | [Permutations / 全排列](https://leetcode.com/problems/permutations/)| [Swift](/LeetCodeProblems/Recursion/46-Permutations.md) | Medium |
 | 77 | [Combinations / 组合](https://leetcode.com/problems/combinations/)| [Swift](/LeetCodeProblems/Recursion/77-Combinations.md) | Medium |
-
+| 38 | [Count And Say / 外观数列](https://leetcode.com/problems/count-and-say/)| [Swift](/LeetCodeProblems/Recursion/38-count-and-say.md) | Easy |
 ## Backtracking / 回溯
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
