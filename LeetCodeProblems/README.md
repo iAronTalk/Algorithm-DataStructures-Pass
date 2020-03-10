@@ -133,6 +133,7 @@
 | 122 | [Best Time to Buy and Sell Stock II / 买卖股票的最佳时机 II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Swift](/LeetCodeProblems/DynamicProgramming/122-Best-Time-to-Buy-and-Sell-Stock-II.md) | Easy |
 | 935 | [Knight Dialer / 骑士拨号器](https://leetcode.com/problems/knight-dialer/)| [Swift](/LeetCodeProblems/DynamicProgramming/935-Knight-Dialer.md) | Medium |
 | 150 | [Maximum Product  Subarray / 乘积最大子序列](https://leetcode.com/problems/maximum-product-subarray/)| [Swift](/LeetCodeProblems/DynamicProgramming/150-maximum-product-subarray.md) | Medium |
+| 300 | [Longest Increasing Subsequence / 最长上升子序列](https://leetcode.com/problems/longest-increasing-subsequence/)| [Swift](/LeetCodeProblems/DynamicProgramming/300-longest-increasing-subsequence.md) | Medium |
 
 ## Recursion / 递归
 | # | Title | Solution | Difficulty |
