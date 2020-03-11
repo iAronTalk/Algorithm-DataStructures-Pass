@@ -22,21 +22,22 @@
 
 ```
 class Solution {
-    func maxProduct(_ nums: [Int]) -> Int {
+    func lengthOfLIS(_ nums: [Int]) -> Int {
         if nums.count == 0 {
             return 0
         }
-        var res = nums[0]
-        var dp = [[Int]].init(repeating: [Int].init(repeating: 0, count: 2), count: 2) //只用2x2的数组即可。
-        dp[0][0] = nums[0]
-        dp[0][1] = nums[0]
-        for i in 1..<nums.count {
-            let x = i % 2 //获取最大值的位置。
-            let y = (i - 1) % 2 //获取最小值的位置。
-            dp[x][0] = max(dp[y][0] * nums[i], dp[y][1] * nums[i], nums[i])
-            dp[x][1] = min(dp[y][0] * nums[i], dp[y][1] * nums[i], nums[i])
-            res = max(res, dp[x][0])
+
+        var dp = [Int].init(repeating: 1, count: nums.count + 1)
+        var res = 1
+        for i in 0..<nums.count {
+            for j in 0..<i {
+                if nums[j] < nums[i] {
+                    dp[i] = max(dp[j] + 1, dp[i])
+                }
+            }
+            res = max(dp[i], res)
         }
+
         return res
     }
 }
