@@ -41,23 +41,24 @@ for (int i = 0; i < len; i++) {
 ```
 **所有可能解法**
 
-- 删除多余的元素，计数指针不移动，无赋值操作，返回最后的总数。
-- 先前赋值，返回计数指针。
-
+- while循环直接删除法。
+- 双指针，快指针遍历全部后，返回慢的指针所在的位置。
 **CODINNG**
 
 ```
 class Solution {
-    func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
-
-        var index = 0
-        var originalCount = nums.count
-        while index < originalCount {
-            if val == nums[index] {
-                nums.remove(at: index)
-                originalCount = originalCount - 1
+    func removeDuplicates(_ nums: inout [Int]) -> Int {
+        if nums.count == 0 {
+            return 0
+        }
+        var pre = Int.min
+        var i = 0
+        while i < nums.count {
+            if nums[i] != pre {
+                pre = nums[i]
+                i += 1
             } else {
-                index = index + 1
+                nums.remove(at: i)
             }
         }
         return nums.count

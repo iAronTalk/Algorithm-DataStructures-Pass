@@ -28,14 +28,12 @@ class Solution {
         }
         var i = 0
         var j = 1
-        var count = nums.count
-        while j < count {
+        while j < nums.count {
             if nums[i] != nums[j] {
                 i = i + 1
                 j = j + 1
             } else {
                 nums.remove(at: j)
-                count = count - 1
             }
         }
         return i + 1

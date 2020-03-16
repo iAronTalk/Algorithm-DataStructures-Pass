@@ -34,9 +34,9 @@ class Solution {
             } else if nums1[i + j] > nums2[j] {
                 nums1.insert(nums2[j], at: i + j)
                 nums1.removeLast()
-                j = j + 1
+                j += 1
             } else {
-                i = i + 1
+                i += 1
             }
         }
     }

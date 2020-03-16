@@ -13,7 +13,8 @@
 向右旋转 2 步: 4->5->1->2->3->NULL
 ```
 **注意事项**
-处理重复的操作，k为链表长度的整数倍时，取余进行操作。
+处理重复的操作，k为链表长度的整数倍时，取余进行操作，整数倍数相当于什么都没做。
+
 
 **CODINNG**
 ```
@@ -27,7 +28,7 @@ class Solution {
 
         var pre: ListNode? = nil
         var cur: ListNode? = safeHead
-
+        //数一数链表的长度，同时把pre和cur的指针都遍历到末尾。
         var listLength = 1
         while cur?.next != nil {
             pre = cur!

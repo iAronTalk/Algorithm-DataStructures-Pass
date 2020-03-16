@@ -69,4 +69,27 @@ class Solution {
         return secondNode
     }
 }
+
+*方法三，思路与一一致，更直观点*
+class Solution {
+    func swapPairs(_ head: ListNode?) -> ListNode? {
+        guard let safeHead = head else {
+                return nil
+        }
+        let firstNode: ListNode = ListNode(0) //哨兵
+        var pre: ListNode = firstNode
+        pre.next = safeHead
+        while (pre.next != nil) && (pre.next?.next != nil) {
+            let a = pre.next!
+            let b = pre.next?.next!
+            let bnext = b?.next
+
+            pre.next = b
+            b?.next = a
+            a.next = bnext
+            pre = a //这个是重点
+        }
+        return firstNode.next
+    }
+}
 ```

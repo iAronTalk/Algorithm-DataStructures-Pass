@@ -20,20 +20,24 @@
 
 ```
 class Solution {
-    func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+    func removeDuplicates(_ nums: inout [Int]) -> Int {
+        if nums.count <= 2{
+            return nums.count
+        }
+        var i = 0
+        var j = 1
 
-        var index = 0
-        var originalCount = nums.count
-        while index < originalCount {
-            if val == nums[index] {
-                nums.remove(at: index)
-                originalCount = originalCount - 1
+        while j < nums.count {
+            if nums[i] == nums[j] && j - i < 2 {
+                j += 1
+            } else if nums[i] == nums[j] && j - i == 2 {
+                nums.remove(at: j)
             } else {
-                index = index + 1
+                i += 1
+                j += 1
             }
         }
         return nums.count
     }
 }
-
 ```

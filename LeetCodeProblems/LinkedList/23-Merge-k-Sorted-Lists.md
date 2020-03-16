@@ -44,7 +44,7 @@ class Solution {
         }
 
         var res = [ListNode]()
-        for i in 0...(lists.count - 1) where i & 1 == 0{
+        for i in 0...<lists.count where i & 1 == 0 {
             var listNode: ListNode? = nil
             if i + 1 <= lists.count - 1 {
                 listNode = mergeTwoLists(lists[i], lists[i + 1])
