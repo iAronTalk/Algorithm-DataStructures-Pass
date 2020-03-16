@@ -1,58 +1,43 @@
 import UIKit
 
 /*
- 请定义一个队列并实现函数 max_value 得到队列里的最大值，要求函数max_value、push_back 和 pop_front 的均摊时间复杂度都是O(1)。
+ 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
 
- 若队列为空，pop_front 和 max_value 需要返回 -1
+  
 
  示例 1：
 
- 输入:
- ["MaxQueue","push_back","push_back","max_value","pop_front","max_value"]
- [[],[1],[2],[],[],[]]
- 输出: [null,null,null,2,1,2]
- 示例 2：
-
- 输入:
- ["MaxQueue","pop_front","max_value"]
- [[],[],[]]
- 输出: [null,-1,-1]
-
+ 输入：head = [1,3,2]
+ 输出：[2,3,1]
  */
 
-//解法：这是一道看似简单，实际不简单的题目，双端队列来更新max中的值，有新值进入后，把小于这个值的所有数全部抛出，然后无论如何把这个数放进去。保持队列的前端放置的最大。
-//leetcode链接：https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/
-class MaxQueue {
-    var max = [Int]()
-    var internalQueue = [Int]()
-    
-    init() {
+//leetcode链接：https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
 
+ public class ListNode {
+    public var val: Int
+    public var next: ListNode?
+    public init(_ val: Int) {
+        self.val = val
+        self.next = nil
     }
-    
-    func max_value() -> Int {
-        if internalQueue.count == 0 {
-            return -1
+}
+ 
+class Solution {
+     func reversePrint(_ head: ListNode?) -> [Int] {
+        guard head != nil else {
+            return []
         }
-        return max.first!
-    }
-    
-    func push_back(_ value: Int) {
-        while max.count > 0 && value > max.last! {
-            max.removeLast()
+
+        var stack = [Int]()
+        var cur = head
+        while cur != nil {
+            stack.append(cur!.val)
+            cur = cur?.next
         }
-        max.append(value)
-        internalQueue.append(value)
-    }
-    
-    func pop_front() -> Int {
-        if internalQueue.count == 0 {
-            return -1
+        var res = [Int]()
+        while !stack.isEmpty {
+            res.append(stack.removeLast())
         }
-        let front = internalQueue.removeFirst()
-        if front == max.first {
-            max.removeFirst()
-        }
-        return front
+        return res
     }
 }
