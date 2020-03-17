@@ -23,13 +23,13 @@
 你可以假设所给定的表达式都是有效的。
 请不要使用内置的库函数 eval。
 ```
-
+备注：这道题应该是Grab面试的时候考察过。
 **CODINNG**
 
 ```
 class Solution {
     func isDigit(_ char: Character) -> Bool {
-        return (Character("0")...Character("9")).contains(char)
+        return (Character("0")...Character("9")).contains(char) //这一步操作记住。
     }
 
     func calculate(_ s: String) -> Int {
@@ -57,7 +57,7 @@ class Solution {
                 }
 
                 num = 0
-                sign = String(cur)
+                sign = String(cur) //记录上一个符号。
             }
         }
 
