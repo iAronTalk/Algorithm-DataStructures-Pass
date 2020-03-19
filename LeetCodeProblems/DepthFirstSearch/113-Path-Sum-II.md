@@ -52,16 +52,46 @@ class Solution {
     func pathSum(_ root: TreeNode?, _ sum: Int) -> [[Int]] {
         guard let safeRoot = root else { return res }
         list.append(safeRoot.val)
-        if safeRoot.left == nil && safeRoot.right == nil && safeRoot.val == sum{
+        //因为要一直延续到叶子节点。
+        if safeRoot.left == nil && safeRoot.right == nil && safeRoot.val == sum {
             res.append(list)
         }
 
         pathSum(safeRoot.left, sum - safeRoot.val)
         pathSum(safeRoot.right, sum - safeRoot.val)
 
-        //这点非常重要，遍历完当前层，回复list原样，删除当前层的节点。
+        //这点非常重要，遍历完当前层，回复list原样，删除当前层的节点，递归中的每一层都会删除该层加入list中的元素。
         list.removeLast()
         return res;
+    }
+}
+
+方法二，list作为参数传入到递归中，省却一步复原操作。凡是使用全局变量的情况，一定要考虑复原的操作。
+class Solution {
+    var res = [[Int]]()
+    func pathSum(_ root: TreeNode?, _ sum: Int) -> [[Int]] {
+        guard root != nil else {
+            return []
+        }
+        self.DFS(root, sum, [])
+        return res
+    }
+    func DFS(_ root: TreeNode?, _ sum: Int, _ list: [Int]) -> Void {
+        guard root != nil else {
+            return
+        }
+        var list = list
+        list.append(root!.val)
+        if root!.left == nil && root!.right == nil && root!.val == sum {
+            res.append(list)
+            return
+        }
+        if root!.left != nil {
+            DFS(root!.left, sum - root!.val, list)
+        }
+        if root!.right != nil {
+            DFS(root!.right, sum - root!.val, list)
+        }
     }
 }
 
