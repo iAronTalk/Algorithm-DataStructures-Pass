@@ -74,7 +74,8 @@ wordList = ["hot","dot","dog","lot","log"]
             let word = queue.removeFirst()
             let level = visited[word]!
 
-            var wordArray = Array(word)
+            var wordArray = Array(word) //核心思想就是遍历所有可能的情况，进行替换，本质倒也不难。
+            //这个地方的操作，却有BFS的影子，可能拼装出来的任何一个单词都是该层的元素，只是我么需要的是wordlist中的。
             for i in 0..<wordArray.count {
                 for item in alphabet {
                     if item == wordArray[i] {

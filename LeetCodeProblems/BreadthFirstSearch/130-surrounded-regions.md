@@ -47,9 +47,9 @@ class Solution11 {
         }
         var queue = [Node]()
         var visited = [Node]()
+        //全局遍历找边缘0点。
         for row in 0..<board.count {
             for col in 0..<board[0].count {
-
                 let cur = board[row][col]
                 if (row == 0 || row == board.count - 1 || col == 0 || col == board[0].count - 1) &&
                      cur == "O" {

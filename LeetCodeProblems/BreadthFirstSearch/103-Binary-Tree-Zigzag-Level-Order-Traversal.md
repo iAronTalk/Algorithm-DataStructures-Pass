@@ -23,7 +23,7 @@
 
 **可能解法**
 
-- BFS。
+- BFS,DFS
 
 **CODINNG**
 
@@ -40,7 +40,7 @@
  *         self.right = nil
  *     }
  *
-
+//BFS
  class Solution {
     func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
         guard let safeRoot = root else { return [] }
@@ -54,7 +54,7 @@
             var curretLevel = [Int]()
             for item in level % 2 == 1 ? queue.reversed() : queue {
                 curretLevel.append(item.val)
-            }
+            } //这个地方处理很精妙，比在append的时候进行操作要容易很多。记住啊，长点心吧。
 
             for item in queue {
                 if item.left != nil {
@@ -73,4 +73,30 @@
     }
  }
 
+//DFS
+class Solution {
+    var res = [[Int]]()
+    func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
+        guard root != nil else {
+            return []
+        }
+        DFS(root, 0)
+        return res
+    }
+    func DFS(_ root: TreeNode?, _ level: Int) -> Void {
+        guard root != nil else {
+            return
+        }
+        if res.count < level + 1 {
+            res.append([])
+        }
+        if level & 1 == 1 {
+            res[level].insert(root!.val, at: 0)
+        } else {
+            res[level].append(root!.val)
+        }
+        DFS(root?.left, level + 1)
+        DFS(root?.right, level + 1)
+    }
+}
 ```
