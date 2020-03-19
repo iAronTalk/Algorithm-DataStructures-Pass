@@ -11,6 +11,7 @@ def BFS(graph, start, end):
       return []
 
     queue = []
+    visited = []
     queue.append([start])
     while queue:
         node = queue.pop()
@@ -78,12 +79,15 @@ def DFS(self,tree):
 > 如果是对树的遍历，那么这个visitedset就是可以省略。
 
 **注意：BFS遍历和DFS非递归遍历，generatedRelatedNodesd如何处理，如何处理层**
-> generateRelatedNodes和node.pop()操作是有关系的。
+> generateRelatedNodes和node.pop()操作是有关系的，即有的时候pop操作是发生在generateRelatedNodes里面的。
 > BFS,DFS非递归的方式，法一：node绑定层，使用特殊的容器，容器元素为【int:int】或者queue本身就存放数组，哨兵的概念。法二：记录层的元素个数，遍历全部该层的元素。
-> DFS递归的方式，法三层作为参数传递。
-> BFS，只有只用法一，DFS，使用法一和法三。
+
+> DFS递归的方式：法三层作为参数传递。
+
+> 综上：BFS，只有用**法一，法二**。DFS，使用**法一，法三**。
 
 **递归终止条件尽量往前面写，方便思考和控制**
+
 ## Leetcode真题
 
 **102-二叉树的层次遍历-Medium**
@@ -252,6 +256,7 @@ class Solution {
 ```
 //TreeNode数据结构同上题目
 class Solution {
+    //DFS的方法还需要多多理解。
     func minDepth(_ root: TreeNode?) -> Int {
         if root == nil {
             return 0
@@ -266,7 +271,7 @@ class Solution {
             return 1 + min(left,right)
         }
     }
-    //BFS做法
+    //BFS做法，到底是BFS更容易。
     func minDepth(_ root: TreeNode?) -> Int {
        guard let safeRoot = root else { return 0 }
        var queue = [TreeNode]()
@@ -301,12 +306,21 @@ class Solution {
 
 给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。
 
+```例如，给出 n = 3，生成结果为：
+
+[
+  "((()))",
+  "(()())",
+  "(())()",
+  "()(())",
+  "()()()"
+]```
 > 所有可能解法
 
 - 递归 + 剪枝 1）局部不满足条件的直接pass，2）左右只能各n个。
 
 - 这道题目如果让自己想可能会有问题，所以暂请记下解题步骤慢慢体会递归和剪枝。
-
+- 递归我的乖乖，还是想起来很烧脑，记住吧。
 > CODINNG
 
 ```
