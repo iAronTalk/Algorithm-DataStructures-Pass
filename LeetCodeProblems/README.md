@@ -78,6 +78,7 @@
 | 199 | [Binary Tree Right Side View / 二叉树的右视图](https://leetcode.com/problems/binary-tree-right-side-view/)| [Swift](/LeetCodeProblems/Tree/199-Binary-Tree-Right-Side-View.md) | Medium |
 | 226 | [Invert Binary Tree / 翻转二叉树](https://leetcode.com/problems/invert-binary-tree/)| [Swift](/LeetCodeProblems/Tree/226-Invert-Binary-Tree.md) | Medium |
 | 124 | [Binary Tree Maximum Path Sum / 二叉树中的最大路径和](https://leetcode.com/problems/binary-tree-maximum-path-sum/)| [Swift](/LeetCodeProblems/Tree/124-binary-tree-maximum-path-sum.md) | Hard |
+| 145 | [Binary Tree Postorder Traversal / 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/145-binary-tree-postorder-traversal.md) | Hard |
 
 ## HashTable / 哈希表
 | # | Title | Solution | Difficulty |
