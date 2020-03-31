@@ -57,4 +57,23 @@ class Solution {
         return stack.removeLast()
     }
 }
+
+class Solution {
+    var res = [Int]()
+    func inorderTraversal(_ root: TreeNode?) -> [Int] {
+        if root == nil {return []}
+        var stack = [TreeNode]()
+        var cur = root
+        while cur != nil || !stack.isEmpty {
+            while cur != nil {
+                stack.append(cur!)
+                cur = cur!.left
+            }
+            cur = stack.removeLast()
+            res.append(cur!.val)
+            cur = cur!.right
+        }
+        return res
+    }
+}
 ```
