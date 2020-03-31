@@ -9,20 +9,28 @@
 极客时间视频代码为*Python*，剑指offer样例代码为*C*++，最近在学习Swift，决定就用Swift实现算法。当前学习目的为掌握基础，稳步提升，故涉及到LeetCode Hard级别的题目予以跳过，仅做了解思想。其他Easy/Medium级别的题目要独立完成。
 
 
-### <img src="/Resources/root-1.png" disabled="true" width="50" hegiht="50" align=center /> [算法通关](/GeekTimeAlgorithmPass)
+### <img src="/Resources/root-1.png" disabled="true" width="50" hegiht="50" align=center /> [点击-算法通关-查看](/GeekTimeAlgorithmPass)
 
-[极客时间 - 算法通关 - 传送门](https://time.geekbang.org/course/intro/130)
+[极客时间 - 算法通关 - 链接](https://time.geekbang.org/course/intro/130)
 
-### <img src="/Resources/root-1.png" disabled="true" width="50" hegiht="50" align=center /> [剑指offer](/⚔Offer)
-[剑指offer - Github - 传送门](https://github.com/zhedahht/CodingInterviewChinese2)
+### <img src="/Resources/root-1.png" disabled="true" width="50" hegiht="50" align=center /> [点击-剑指offer-查看](/⚔Offer)
+[剑指offer - Github - 链接](https://github.com/zhedahht/CodingInterviewChinese2)
 
-### <img src="/Resources/root-1.png" disabled="true" width="50" hegiht="50" align=center /> [LeetCode](/LeetCodeProblems)
+### <img src="/Resources/root-1.png" disabled="true" width="50" hegiht="50" align=center /> [点击-LeetCode-查看](/LeetCodeProblems)
 
-[LeetCode-英文-传送门](https://leetcode.com)
+[LeetCode-英文-链接](https://leetcode.com)
 
-[LeetCode-中文-传送门](https://leetcode-cn.com)
+[LeetCode-中文-链接](https://leetcode-cn.com)
 
 ### [数据结构与算法之美](/BeautyOfAlgorithmDataStructures)
 
 上传到仓库一方面监督学习，做好笔记，另一边面也希望可以帮助到有缘看到的你。
 努力，加油。
+
+关于算法我个人也看些文章，或者找到一些非常好的资源，都躺在收藏夹里，比价乱，这里把**十星推荐**的列出来。
+排名第一的要数`Raywenderlich`家的算法训练营了，从最基础的讲起慢慢延伸，不过需要些英文功底。
+- [swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club)
+
+- [labuladong-fucking-algorithm](https://github.com/labuladong/fucking-algorithm):史诗级作品，总结出来非常多的模板和常见题目的详细步骤。
+
+- [语雀-Rainxbow/算法整理+leetcode+剑指offer](https://www.yuque.com/zhujinpei/leecode) 只有代码，没有配文，但代码质量还可以。
