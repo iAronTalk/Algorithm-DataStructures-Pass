@@ -31,7 +31,7 @@
 | 118 | [Pascal's Triangle / 杨辉三角](https://leetcode.com/problems/pascals-triangle/)| [Swift](/LeetCodeProblems/Array/118-Pascal's-Triangle.md) | Easy |
 | 349 | [Intersection of Two Arrays / 两个数组的交集](https://leetcode.com/problems/intersection-of-two-arrays/)| [Swift](/LeetCodeProblems/Array/349-Intersection-of-Two-Arrays.md) | Easy |
 | 350 | [Intersection of Two Arrays II / 两个数组的交集 II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)| [Swift](/LeetCodeProblems/Array/350-Intersection-of-Two-Arrays-II.md) | Easy |
-
+| 179 | [Largest-Number / 最大数](https://leetcode.com/problems/largest-number/)| [Swift](/LeetCodeProblems/Array/179-largest-number.md) | Medium |
 ## String / 字符串
 | # | Title | Solution | Difficulty |
 | - | ----- | -------- | ---------- |
