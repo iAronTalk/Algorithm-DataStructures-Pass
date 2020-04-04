@@ -137,6 +137,7 @@
 | 150 | [Maximum Product  Subarray / 乘积最大子序列](https://leetcode.com/problems/maximum-product-subarray/)| [Swift](/LeetCodeProblems/DynamicProgramming/150-maximum-product-subarray.md) | Medium |
 | 300 | [Longest Increasing Subsequence / 最长上升子序列](https://leetcode.com/problems/longest-increasing-subsequence/)| [Swift](/LeetCodeProblems/DynamicProgramming/300-longest-increasing-subsequence.md) | Medium |
 | 322 | [Coin Change / 零钱兑换](https://leetcode.com/problems/coin-change/)| [Swift](/LeetCodeProblems/DynamicProgramming/322-coin-change.md) | Medium |
+| 5 | [Longest Palindromic Substring / 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)| [Swift](/LeetCodeProblems/DynamicProgramming/5-longest-palindromic-substring.md) | Medium |
 
 ## Recursion / 递归
 | # | Title | Solution | Difficulty |
