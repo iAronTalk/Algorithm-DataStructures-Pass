@@ -59,7 +59,7 @@
 | 237 | [Delete Node in a Linked List / 删除链表中的节点](https://leetcode.com/problems/delete-node-in-a-linked-list/)| [Swift](/LeetCodeProblems/LinkedList/237-Delete-Node-in-a-Linked-List.md) | Easy |
 | 86 | [Partition List / 分隔链表](https://leetcode.com/problems/partition-list/)| [Swift](/LeetCodeProblems/LinkedList/86-Partition-List.md) | Medium |
 | 143 | [Reorder List / 重排链表](https://leetcode.com/problems/reorder-list/)| [Swift](/LeetCodeProblems/LinkedList/143-reorder-list.md) | Medium |
-| 143 | [Reverse List II / 翻转链表ii](https://leetcode-cn.com/problems/reverse-linked-list-ii/)| [Swift](/LeetCodeProblems/LinkedList/92-reverse-linked-list-ii.md) | Medium |
+| 230 | [Kth Smallest Element In-a-BST / 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/)| [Swift](/LeetCodeProblems/LinkedList/230-kth-smallest-element-in-a-bst.md) | Medium |
 
 ## Tree / 树
 | # | Title | Solution | Difficulty |
@@ -79,6 +79,7 @@
 | 199 | [Binary Tree Right Side View / 二叉树的右视图](https://leetcode.com/problems/binary-tree-right-side-view/)| [Swift](/LeetCodeProblems/Tree/199-Binary-Tree-Right-Side-View.md) | Medium |
 | 226 | [Invert Binary Tree / 翻转二叉树](https://leetcode.com/problems/invert-binary-tree/)| [Swift](/LeetCodeProblems/Tree/226-Invert-Binary-Tree.md) | Medium |
 | 124 | [Binary Tree Maximum Path Sum / 二叉树中的最大路径和](https://leetcode.com/problems/binary-tree-maximum-path-sum/)| [Swift](/LeetCodeProblems/Tree/124-binary-tree-maximum-path-sum.md) | Hard |
+| 145 | [Binary Tree Postorder Traversal / 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/145-binary-tree-postorder-traversal.md) | Hard |
 | 145 | [Binary Tree Postorder Traversal / 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/145-binary-tree-postorder-traversal.md) | Hard |
 
 ## HashTable / 哈希表
