@@ -60,6 +60,7 @@
 | 86 | [Partition List / 分隔链表](https://leetcode.com/problems/partition-list/)| [Swift](/LeetCodeProblems/LinkedList/86-Partition-List.md) | Medium |
 | 143 | [Reorder List / 重排链表](https://leetcode.com/problems/reorder-list/)| [Swift](/LeetCodeProblems/LinkedList/143-reorder-list.md) | Medium |
 | 25 | [Reverse Nodes In-k-Group / K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)| [Swift](/LeetCodeProblems/LinkedList/25-reverse-nodes-in-k-group.md) | Hard |
+| 328 | [Odd Even Linked List / 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/)| [Swift](/LeetCodeProblems/LinkedList/328-odd-even-linked-list.md) | Medium |
 
 ## Tree / 树
 | # | Title | Solution | Difficulty |
