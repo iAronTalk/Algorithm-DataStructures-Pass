@@ -39,7 +39,7 @@ class Solution {
         if inter == nil {
             return nil
         }
-        //然后画画图可以发现规律，可以找到环所在的位置。有兴趣的可以去Leetcode官网查看数学证明。
+        //2.然后画画图可以发现规律，可以找到环所在的位置。有兴趣的可以去Leetcode官网查看数学证明。
         var p1: ListNode? = head
         var p2: ListNode? = inter
         while p1 !== p2 {
@@ -48,7 +48,7 @@ class Solution {
         }
         return p1
     }
-    //先通过快慢指针找到第一次快慢指针相交的点。
+    //1.先通过快慢指针找到第一次快慢指针相交的点。
     func findInterection(_ head: ListNode?) -> ListNode? {
         guard let head = head else { return nil }
         var p1: ListNode? = head
