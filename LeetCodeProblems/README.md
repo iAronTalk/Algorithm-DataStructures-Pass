@@ -34,6 +34,7 @@
 | 179 | [Largest-Number / 最大数](https://leetcode.com/problems/largest-number/)| [Swift](/LeetCodeProblems/Array/179-largest-number.md) | Medium |
 | 56 | [Merge Intervals / 合并区间](https://leetcode-cn.com/problems/merge-intervals/)| [Swift](/LeetCodeProblems/Array/56-merge-intervals.md) | Medium |
 | 283 | [Move Zeros / 移动零](https://leetcode-cn.com/problems/move-zeroes/)| [Swift](/LeetCodeProblems/Array/283-move-zeroes.md) | Easy |
+| 287 | [Find The Duplicate Number / 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)| [Swift](/LeetCodeProblems/Array/287-find-the-duplicate-number.md) | Medium |
 
 ## String / 字符串
 | # | Title | Solution | Difficulty |
