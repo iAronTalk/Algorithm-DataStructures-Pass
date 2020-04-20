@@ -87,6 +87,7 @@
 | 145 | [Binary Tree Postorder Traversal / 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)| [Swift](/LeetCodeProblems/Tree/145-binary-tree-postorder-traversal.md) | Hard |
 | 230 | [Kth Smallest Element In-a-BST / 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/)| [Swift](/LeetCodeProblems/LinkedList/230-kth-smallest-element-in-a-bst.md) | Medium |
 | 222 | [Count Complete Tree Nodes / 完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes/)| [Swift](/LeetCodeProblems/Tree/222-count-complete-tree-nodes.md) | Hard |
+| 606 | [Construct String From Binary Tree / 根据二叉树创建字符串](https://leetcode-cn.com/problems/construct-string-from-binary-tree/)| [Swift](/LeetCodeProblems/Tree/606-construct-string-from-binary-tree.md) | Medium |
 
 ## HashTable / 哈希表
 | # | Title | Solution | Difficulty |
