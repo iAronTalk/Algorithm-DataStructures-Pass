@@ -33,4 +33,18 @@ class Solution {
         return cur
     }
 }
+
+// 递归写法
+class Solution {
+     func reverseList(_ head: ListNode?) -> ListNode? {
+        
+        if head == nil || head?.next == nil {
+            return head
+        }
+        let nextHead = reverseList(head!.next)
+        head!.next!.next = head
+        head!.next = nil
+        return nextHead
+    }
+}
 ```

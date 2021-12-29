@@ -50,6 +50,25 @@ class Solution {
         return dummy.next
     }
 }
+
+class Solution {
+    func swapPairs(_ head: ListNode?) -> ListNode? {
+        guard let safeHead = head else {
+            return nil
+        }
+        let dummyNode = ListNode.init(0, safeHead)
+        var temp: ListNode? = dummyNode
+        while temp?.next != nil && temp?.next?.next != nil {
+            let node1 = temp!.next!
+            let node2 = temp!.next!.next!
+            temp?.next = node2
+            node1.next = node2.next
+            node2.next = node1
+            temp = node1
+        }
+        return dummyNode.next
+    }
+}
 ```
 
 *方法二*
