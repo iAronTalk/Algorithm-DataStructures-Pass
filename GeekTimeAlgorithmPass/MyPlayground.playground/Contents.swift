@@ -775,8 +775,150 @@ print(myQueue.empty())
 //print(length)
 
 
-class Solution {
-    func rob(_ nums: [Int]) -> Int {
-        if nums.count == 0 {}
+//class Solution {
+//    func rob(_ nums: [Int]) -> Int {
+//        if nums.count == 0 {}
+//    }
+//}
+
+//class Solution {
+//    func isValidSudoku(_ board: [[Character]]) -> Bool {
+//        var row: [[Bool]] = Array(repeating: Array(repeating: false, count: 10), count: 10)
+//        var col: [[Bool]] = Array(repeating: Array(repeating: false, count: 10), count: 10)
+//        var area: [[Bool]] = Array(repeating: Array(repeating: false, count: 10), count: 10)
+//        for (i, sub) in board.enumerated() {
+//            for (j, char) in sub.enumerated() {
+//                if char == "." {
+//                    continue
+//                }
+//                let u = Int(String(char))! - 0
+//                let index = i / 3 * 3 + j / 3
+//                if row[i][u] || col[j][u] || area[index][u] {
+//                    return false
+//                }
+//                row[i][u] = true
+//                col[j][u] = true
+//                area[index][u] = true
+//            }
+//        }
+//        return true
+//    }
+//}
+//
+//let s = Solution()
+//let r = s.isValidSudoku([["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]])
+//print(r)
+
+//class Solution {
+//    func solveSudoku(_ board: inout [[Character]]) {
+//        backtrace(&board)
+//    }
+//
+//    func backtrace(_ board: inout [[Character]]) -> Bool {
+//        for i in 0..<9 {
+//            for j in 0..<9 {
+//                if board[i][j] != "." {
+//                    continue
+//                }
+//
+//                for char in "123456789" {
+//                    if isValid(row: i, col: j, char: char, board: &board) {
+//                        board[i][j] = char
+//                        if backtrace(&board) {
+//                            return true
+//                        } else {
+//                            board[i][j] = "."
+//                        }
+//                    }
+//                }
+//                return false
+//            }
+//        }
+//        return true
+//    }
+//
+//    func isValid(row: Int, col: Int, char: Character, board: inout [[Character]]) -> Bool {
+//        for i in 0..<9 {
+//            if board[row][i] == char {
+//                return false
+//            }
+//            if board[i][col] == char {
+//                return false
+//            }
+//            if board[row / 3 * 3 + i % 3][col / 3 * 3 + i / 3] == char {
+//                return false
+//            }
+//        }
+//         return true
+//    }
+//}
+
+//class Solution {
+//    func mySqrt(_ x: Int) -> Int {
+//        if (x == 0 || x == 1) { return x }
+//        var left = 1
+//        var res = 1
+//        var right = x
+//        var mid = 0
+//        while left <= right {
+//            mid = left + (right - left) / 2
+//            if mid == x / mid {
+//                return mid
+//            } else if mid > x / mid {
+//                left = mid - 1
+//            } else {
+//                right = mid + 1
+//                res = mid
+//            }
+//        }
+//        return res
+//    }
+//}
+
+class Trie {
+
+    var children: [Character: Trie]
+    var isEnd: Bool
+    init() {
+        self.children = Dictionary()
+        self.isEnd = false
+    }
+    
+    func insert(_ word: String) {
+        var node = self
+        for char in word {
+            if node.children[char] == nil {
+                node.children[char] = Trie()
+            }
+            node = node.children[char]!
+        }
+        node.isEnd = true
+    }
+    
+    func search(_ word: String) -> Bool {
+        var node = self
+        for char in word {
+            if node.children[char] != nil {
+                node = node.children[char]!;
+            } else {
+                return false
+            }
+        }
+        if node.isEnd {
+            return true
+        }
+        return false
+    }
+    
+    func startsWith(_ prefix: String) -> Bool {
+        var node = self
+        for char in prefix {
+            if node.children[char] != nil {
+                node = node.children[char]!;
+            } else {
+                return false
+            }
+        }
+        return true
     }
 }
